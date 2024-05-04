@@ -1,0 +1,813 @@
+$pageBackgroundColor: black;
+$fontFamily: Arial, Helvetica, sans-serif;
+$fontColor: white;
+$fontSize: 4vh;
+
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url('../assets/common/fonts/Rubik-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rubik-Med';
+    src: url('../assets/common/fonts/Rubik-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto-Sans';
+    src: url('../assets/common/fonts/NotoSansMono.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Azaret-Med';
+    src: url('../assets/common/fonts/AzeretMono-Medium.ttf') format('truetype');
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: $pageBackgroundColor;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+.fakeTxtRubikBold {
+    font-family: 'Rubik-Bold';
+    font-size: 0;
+    height: 0;
+    width: 0;
+}
+
+.fakeTxtRubikMed {
+    font-family: 'Rubik-Med';
+    font-size: 0;
+    height: 0;
+    width: 0;
+}
+
+.fakeTxtNotoSans {
+    font-family: 'Noto-Sans';
+    font-size: 0;
+    height: 0;
+    width: 0;
+}
+
+.fakeTxtAzaretMed {
+    font-family: 'Azaret-Med';
+    font-size: 0;
+    height: 0;
+    width: 0;
+}
+
+#mainContent {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    .gameContent {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .backgroundsHolder {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1000;
+
+            .transaction-id {
+                width: 50vw;
+                height: auto;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 2vh;
+                color: #5ebcff;
+                z-index: 5;
+                text-align: left;
+                padding-left: 10px;
+            }
+
+            .clock {
+                width: 50vw;
+                height: auto;
+                position: absolute;
+                left: 50vw;
+                top: 0;
+                font-size: 2vh;
+                color: #5ebcff;
+                z-index: 5;
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            div {
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: opacity 0.3s linear;
+            }
+        }
+
+        .gameContainer {
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            opacity: 0;
+
+            .canvasContainer {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .popupContainer {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 1000000;
+
+            .popupLook {
+                width: 50%;
+                height: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -25% 0 0 -25%;
+                border: 1px solid #ccc;
+                background-color: rgba($color: #000000, $alpha: 0.7);
+                text-transform:  uppercase;
+                text-align: center;
+                padding-top: 23%;
+            }
+        }
+
+        .helpContainer {
+            width: 100%;
+            height: 85%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            user-select: none;
+            display: block;
+            opacity: 0;
+            z-index: 2;
+
+            .helpContent {
+                width: 120vh;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                .exitButtonContainer {
+                    width: 100%;
+                    height: 11vh;
+                    position: absolute;
+                    top: 2vh;
+                    left: 0;
+
+                    .container {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        .exitButton {
+                            padding: 2.5vh 3.5vh;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 5vh;
+                            font-weight: 700;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .logoContainer {
+                    width: 120vh;
+                    height: 15%;
+                    display: block;
+                    text-align: center;
+
+                    img {
+                        height: 100%;
+                    }
+                }
+
+                .pagesContainer {
+                    width: 120vh;
+                    height: 70%;
+                    display: block;
+                    position: relative;
+    
+                    .page {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        transition: opacity 0.2s linear;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+
+                        .column {
+                            width: 33.3%;
+                            height: 100%;
+                            display: inline-block;
+
+                            &:last-child {
+                                padding-top: 20vh;
+                            }
+    
+                            .symbolDetails {
+                                width: 100%;
+                                display: block;
+                                margin-top: 8vh;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+    
+                                .symbolContainer {
+                                    width: 100%;
+                                    text-align: center;
+    
+                                    img {
+                                        height: 12vh;
+                                    }
+                                }
+    
+                                .detailsContainer {
+                                    width: 90%;
+                                    margin-left: 5%;
+                                    background-color: rgba(0, 0, 0, 0.6);
+                                    border: 4px double #fff;
+                                    border-radius: 5px;
+                                    font-size: 0.8em;
+                                    
+                                    .leftColumn {
+                                        width: 20%;
+                                        display: inline-block;
+                                        border-right: 1px solid #fff;
+                                        padding: 1vh;
+                                    }
+    
+                                    .rightColumn {
+                                        width: 70%;
+                                        display: inline-block;
+                                        padding: 1vh;
+                                    }
+                                }
+                            }
+                        }
+
+                        .bigBackground {
+                            width: 60%;
+                            border: 4px double #fff;
+                            border-radius: 5px;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            margin-left: 20%;
+                            position: relative;
+
+                            .bigSymbolDetails {
+                                width: 100%;
+                                display: block;
+
+                                .symbolContainer {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+    
+                                    .symbolContainerText {
+                                        width: 60%;
+                                        display: inline-block;
+                                        text-align: center;
+
+                                        img {
+                                            height: 6.5vh;
+                                        }
+
+                                        span {
+                                            width: 100%;
+                                            display: block;
+                                            font-size: 0.6em;
+                                        }
+                                    }
+    
+                                    .symbolContainerImage {
+                                        width: 40%;
+                                        display: inline-block;
+                                        text-align: right;
+    
+                                        img {
+                                            height: 17vh;
+                                        }
+                                    }
+                                }
+    
+                                .detailsContainer {
+                                    width: 50%;
+                                    margin-left: 25%;
+                                    font-size: 0.7em;
+                                    display: block;
+                                    margin-top: -1.5vh;
+                                    
+                                    .leftColumn {
+                                        width: 20%;
+                                        display: inline-block;
+                                        border-right: 1px solid #fff;
+                                        padding: 1vh;
+                                    }
+    
+                                    .rightColumn {
+                                        width: 70%;
+                                        display: inline-block;
+                                        padding: 1vh;
+                                    }
+                                }
+                            }
+                            
+                            .middleTextContainer {
+                                width: 60%;
+                                display: block;
+                                font-size: 0.8em;
+                                text-align: center;
+                                margin-top: 1vh;
+                            }
+
+                            .textContainer {
+                                width: 20vh;
+                                display: block;
+                                position: absolute;
+                                right: -4vh;
+                                bottom: -8vh;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .fullBackground {
+                            width: 100%;
+                            height: 100%;
+                            border: 4px double #fff;
+                            border-radius: 5px;
+                            background-color: rgba(0, 0, 0, 0.6);
+                            padding: 4vh;
+                            color: aqua;
+
+                            .textContainer {
+                                width: 100%;
+                                display: block;
+                                text-align: left;
+                                font-size: 2vh;
+                                font-style: italic;
+                            }
+
+                            .centeredText {
+                                text-align: center !important;
+                                font-size: 1.1em !important;
+                            }
+
+                            .symbolsContainer {
+                                width: 100%;
+                                border: 1px solid aqua;
+                                margin-top: 3vh;
+                                padding: 1vh;
+
+                                .wildContainer {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    img {
+                                        height: 14vh;
+                                    }
+                                }
+
+                                .textHolder {
+                                    width: 100%;
+                                    display: flex;
+                                    margin-top: 1vh;
+                                    font-size: 0.9em;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    img {
+                                        height: 6vh;
+                                    }
+                                }
+
+                                .symbolsHolder {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    margin-top: 1vh;
+
+                                    img {
+                                        height: 12vh;
+                                    }
+                                }
+                            }
+
+                            .scattersContainer {
+                                width: 100%;
+                                display: block;
+                                margin-top: 6vh;
+
+                                .section {
+                                    width: 50%;
+                                    display: inline-block;
+                                    
+                                    img {
+                                        height: 25vh;
+                                    }
+                                }
+
+                                .left {
+                                    text-align: left;
+                                }
+
+                                .right {
+                                    text-align: right;
+                                }
+                            }
+
+                            .linesSection {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                background-color: black;
+                                padding: 2vh;
+
+                                img {
+                                    height: 15vh;
+                                }
+                            }
+
+                            .doubleUpContainer {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                .doubleUpLeft {
+                                    width: 80%;
+                                    display: inline-block;
+
+                                    span {
+                                        width: 100%;
+                                        display: block;
+                                        text-align: left;
+                                        color: #fff;
+                                        font-weight: 700;
+                                        font-size: 0.8em;
+                                        text-transform: uppercase;
+                                    }
+
+                                    p {
+                                        width: 100%;
+                                        display: block;
+                                        text-align: left;
+                                        color: #fff;
+                                        font-size: 0.8em;
+                                        margin-top: 2vh;
+                                        line-height: 1.3em;
+
+                                        span {
+                                            width: auto;
+                                            display: inline-block;
+                                            text-transform: none;
+                                        }
+
+                                        .red {
+                                            color: red;
+                                        }
+
+                                        .black {
+                                            color: #999;
+                                        }
+
+                                        .blue {
+                                            color: aqua;
+                                        }
+
+                                        .green {
+                                            color: chartreuse;
+                                        }
+                                    }
+                                }
+
+                                .doubleUpRight {
+                                    width: 20%;
+                                    display: inline-block;
+
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
+                            .gameRulesContainer {
+                                width: 100%;
+                                display: block;
+                                align-items: center;
+
+                                span {
+                                    width: 100%;
+                                    display: block;
+                                    text-align: left;
+                                    color: #fff;
+                                    font-weight: 700;
+                                    font-size: 2vh;
+                                    text-transform: uppercase;
+                                }
+
+                                p {
+                                    width: 100%;
+                                    display: block;
+                                    text-align: left;
+                                    color: #fff;
+                                    font-size: 1.5vh;
+                                    margin-top: 1.5vh;
+
+                                    span {
+                                        width: auto;
+                                        display: inline-block;
+                                        text-transform: none;
+                                    }
+
+                                    .red {
+                                        color: red;
+                                    }
+
+                                    .black {
+                                        color: #999;
+                                    }
+
+                                    .blue {
+                                        color: aqua;
+                                    }
+
+                                    .green {
+                                        color: chartreuse;
+                                    }
+
+                                    img {
+                                        width: 7vh;
+                                        display: inline;
+                                        vertical-align: middle;
+                                    }
+                                }
+
+                                .smallerText {
+                                    font-size: 1.5vh;
+
+                                    img {
+                                        width: 5vh;
+                                    }
+                                }
+
+                                .centerText {
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .noPadding {
+                            padding: 0 !important;
+                        }
+                    }
+                }
+
+                .navigationContainer {
+                    width: 120vh;
+                    height: 15%;
+                    display: block;
+                    position: relative;
+                }
+
+                .button {
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: 2px solid #666;
+                    cursor: pointer;
+
+                    img {
+                        height: 100%;
+                    }
+
+                    .nullifier {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+
+                .info {
+                    height: 100%;
+                    padding: 3.5vh 4vh 0 4vh;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    text-align: center;
+                    font-weight: 700;
+                    font-size: 1.1em;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    border: 2px solid #666;
+                }
+
+                .left {
+                    text-align: left;
+                    left: 0;
+                }
+
+                .right {
+                    text-align: right;
+                    right: 0;
+                }
+            }
+        }
+
+        .rotateDeviceContainer {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 11111111;
+            display: none;
+            align-content: center;
+
+            .iconHolder {
+                width: 100%;
+                text-align: center;
+
+                img {
+                    width: auto;
+                    height: 30vh;
+                }
+            }
+        }
+
+        .loaderContainer {
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99999999;
+            display: block;
+
+            .gameLogo {
+                width: 100vw;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 80vw auto;
+            }
+
+            .progressBarContainer {
+                width: 70vh;
+                height: 8vh;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+                padding: 2px;
+                position: absolute;
+                left: 50%;
+                bottom: 5vh;
+                margin-left: -35vh;
+
+                .progressBarOutline {
+                    width: 100%;
+                    height: 100%;
+                    border: 2px solid #969696;
+                    box-sizing: border-box;
+                    padding: 2px;
+
+                    .progressBarInline {
+                        width: 0%;
+                        height: 100%;
+                        background-color: rgba(138, 243, 122, 0.9);
+                    }
+                }
+            }
+
+            .touchMessage {
+                width: 70vh;
+                height: 10vh;
+                background-color: rgba($color: #000000, $alpha: 0.85);
+                border: 2px solid #969696;
+                color: #ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                font-weight: 700;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                margin-left: -35vh;
+                bottom: 45%;
+                text-transform: uppercase;
+                padding-top: 2.25vh;
+                display: none;
+            }
+
+            @media (orientation: portrait) {
+                .progressBarContainer {
+                    width: 70vw;
+                    height: 10vw;
+                    margin-left: -35vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    html {
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        width: 100vh;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .gameContainer {
+        width: 100vh !important;
+        height: 100vw !important;
+    }
+
+    .rotateDeviceContainer {
+        width: 100vh !important;
+        height: 100vw !important;
+        display: grid !important;
+    }
+
+    .loaderContainer {
+        width: 100vh !important;
+        height: 100vw !important;
+
+        .gameLogo {
+            width: 100vh !important;
+            height: 100vw !important;
+        }
+    }
+
+    .backgroundsHolder {
+        width: 100vh !important;
+        height: 100vw !important;
+
+        div {
+            width: 100vh !important;
+            height: 100vw !important;
+        }
+    }
+}

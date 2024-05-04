@@ -1,0 +1,133 @@
+{"frames": {
+
+"CatCoins_spojeno_LOOP_0007.png":
+{
+	"frame": {"x":987,"y":1972,"w":94,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":374,"y":732,"w":94,"h":36},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0009.png":
+{
+	"frame": {"x":1787,"y":466,"w":135,"h":129},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":346,"y":639,"w":135,"h":129},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0017.png":
+{
+	"frame": {"x":987,"y":1408,"w":368,"h":517},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":358,"y":251,"w":368,"h":517},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0025.png":
+{
+	"frame": {"x":567,"y":1412,"w":418,"h":630},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":350,"y":48,"w":418,"h":630},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0035.png":
+{
+	"frame": {"x":1,"y":1412,"w":564,"h":631},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":286,"y":4,"w":564,"h":631},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0043.png":
+{
+	"frame": {"x":1360,"y":710,"w":685,"h":763},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":230,"y":5,"w":685,"h":763},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0053.png":
+{
+	"frame": {"x":907,"y":1,"w":878,"h":707},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":131,"y":61,"w":878,"h":707},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0085.png":
+{
+	"frame": {"x":1,"y":1,"w":904,"h":700},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":119,"y":68,"w":904,"h":700},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0087.png":
+{
+	"frame": {"x":881,"y":710,"w":477,"h":696},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":291,"y":48,"w":477,"h":696},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0105.png":
+{
+	"frame": {"x":1357,"y":1475,"w":685,"h":495},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":230,"y":5,"w":685,"h":495},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0115.png":
+{
+	"frame": {"x":1,"y":703,"w":878,"h":707},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":131,"y":61,"w":878,"h":707},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0127.png":
+{
+	"frame": {"x":1787,"y":1,"w":254,"h":313},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":379,"y":405,"w":254,"h":313},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0131.png":
+{
+	"frame": {"x":1787,"y":316,"w":163,"h":148},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":515,"y":620,"w":163,"h":148},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+	"CatCoins_spojeno_LOOP": ["CatCoins_spojeno_LOOP_0007.png","CatCoins_spojeno_LOOP_0009.png","CatCoins_spojeno_LOOP_0017.png","CatCoins_spojeno_LOOP_0025.png","CatCoins_spojeno_LOOP_0035.png","CatCoins_spojeno_LOOP_0043.png","CatCoins_spojeno_LOOP_0053.png","CatCoins_spojeno_LOOP_0085.png","CatCoins_spojeno_LOOP_0087.png","CatCoins_spojeno_LOOP_0105.png","CatCoins_spojeno_LOOP_0115.png","CatCoins_spojeno_LOOP_0127.png","CatCoins_spojeno_LOOP_0131.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bigWin-0.png",
+	"format": "RGBA8888",
+	"size": {"w":2046,"h":2044},
+	"scale": "1",
+	"related_multi_packs": [ "bigWin-1.json", "bigWin-2.json", "bigWin-3.json", "bigWin-4.json", "bigWin-5.json", "bigWin-6.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:51676c6330e927ae9508e17bb2197df8:6fdcb644ba145c840e0654643fd547b2:707e69a339137999535a9523c2f81fe0$"
+}
+}

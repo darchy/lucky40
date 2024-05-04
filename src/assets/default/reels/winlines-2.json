@@ -1,0 +1,30 @@
+{"frames": {
+
+"40-linebuttons-left.png":
+{
+	"frame": {"x":1,"y":1,"w":96,"h":740},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":5,"w":96,"h":740},
+	"sourceSize": {"w":98,"h":750},
+	"anchor": {"x":0,"y":0}
+},
+"40-linebuttons-right.png":
+{
+	"frame": {"x":1,"y":743,"w":96,"h":740},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":5,"w":96,"h":740},
+	"sourceSize": {"w":98,"h":750},
+	"anchor": {"x":0,"y":0}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "winlines-2.png",
+	"format": "RGBA8888",
+	"size": {"w":98,"h":1484},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7725abf215020dd39e994a3d9dd2de68:196e338849619efede323c11e3645e3b:a4c340d4c810b46a62a5c64037f0fb25$"
+}
+}

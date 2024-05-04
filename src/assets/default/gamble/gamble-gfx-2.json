@@ -1,0 +1,106 @@
+{"frames": {
+
+"card_back_new.png":
+{
+	"frame": {"x":1160,"y":420,"w":290,"h":419},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":419},
+	"sourceSize": {"w":290,"h":419},
+	"anchor": {"x":0,"y":0}
+},
+"j_s.png":
+{
+	"frame": {"x":0,"y":0,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"k_c.png":
+{
+	"frame": {"x":0,"y":420,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"k_d.png":
+{
+	"frame": {"x":290,"y":0,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"k_h.png":
+{
+	"frame": {"x":290,"y":420,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"k_s.png":
+{
+	"frame": {"x":580,"y":0,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"q_c.png":
+{
+	"frame": {"x":580,"y":420,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"q_d.png":
+{
+	"frame": {"x":870,"y":0,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"q_h.png":
+{
+	"frame": {"x":870,"y":420,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+},
+"q_s.png":
+{
+	"frame": {"x":1160,"y":0,"w":290,"h":420},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":420},
+	"sourceSize": {"w":290,"h":420},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+	"c": ["j_s.png", "k_c.png", "k_d.png", "k_h.png", "k_s.png", "q_c.png", "q_d.png", "q_h.png", "q_s.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "gamble-gfx-2.png",
+	"format": "RGBA8888",
+	"size": {"w":1450,"h":840},
+	"scale": "1",
+	"related_multi_packs": [ "gamble-gfx-0.json", "gamble-gfx-1.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:69cd2bdabc29ada655a76bd2574e2771:e4595d04f1fb2acc634fe69734d93df0:f27ede6a0d1e92e568aaf5461e34d685$"
+}
+}

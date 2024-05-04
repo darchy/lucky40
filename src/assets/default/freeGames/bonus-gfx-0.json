@@ -1,0 +1,33 @@
+{"frames": {
+
+"BonusBackground.png":
+{
+	"frame": {"x":0,"y":0,"w":1600,"h":900},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1600,"h":900},
+	"sourceSize": {"w":1600,"h":900},
+	"anchor": {"x":0,"y":0}
+},
+"BonusBackgroundAnim/bonus-bcg-0.png":
+{
+	"frame": {"x":0,"y":900,"w":1600,"h":900},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1600,"h":900},
+	"sourceSize": {"w":1600,"h":900},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bonus-gfx-0.png",
+	"format": "RGBA8888",
+	"size": {"w":1600,"h":1800},
+	"scale": "1",
+	"related_multi_packs": [ "bonus-gfx-1.json", "bonus-gfx-2.json", "bonus-gfx-3.json", "bonus-gfx-4.json", "bonus-gfx-5.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:f08263fa6f9e937c669d74b59132fc3a:b67b0294044d62597f455293203e262f:8a2aea1d89a0edaa4a5d86702007cef6$"
+}
+}

@@ -1,0 +1,24 @@
+{"frames": {
+
+"l9.png":
+{
+	"frame": {"x":1,"y":1,"w":1175,"h":364},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":209,"y":257,"w":1175,"h":364},
+	"sourceSize": {"w":1600,"h":900},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "winlines-1.png",
+	"format": "RGBA8888",
+	"size": {"w":1177,"h":366},
+	"scale": "1",
+	"related_multi_packs": [ "winlines-0.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:0089af2101f4e38b906941d5456a0105:72f89ea9603a695fcecb03f7e2c3d228:3cc6f136b160b86d7eaeea470427f900$"
+}
+}

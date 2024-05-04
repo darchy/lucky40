@@ -1,0 +1,97 @@
+{"frames": {
+
+"CatCoins_spojeno_LOOP_0015.png":
+{
+	"frame": {"x":711,"y":1514,"w":367,"h":441},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":331,"y":327,"w":367,"h":441},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0047.png":
+{
+	"frame": {"x":785,"y":1,"w":749,"h":754},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":14,"w":749,"h":754},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0063.png":
+{
+	"frame": {"x":1536,"y":1,"w":509,"h":756},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":324,"y":12,"w":509,"h":756},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0065.png":
+{
+	"frame": {"x":1465,"y":759,"w":540,"h":714},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":297,"y":4,"w":540,"h":714},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0077.png":
+{
+	"frame": {"x":752,"y":757,"w":711,"h":755},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":215,"y":13,"w":711,"h":755},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0079.png":
+{
+	"frame": {"x":1,"y":1,"w":782,"h":744},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":177,"y":24,"w":782,"h":744},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0103.png":
+{
+	"frame": {"x":1080,"y":1514,"w":667,"h":428},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":238,"y":18,"w":667,"h":428},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0107.png":
+{
+	"frame": {"x":1,"y":1455,"w":708,"h":582},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":225,"y":11,"w":708,"h":582},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0109.png":
+{
+	"frame": {"x":1,"y":747,"w":749,"h":706},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":195,"y":14,"w":749,"h":706},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+	"CatCoins_spojeno_LOOP": ["CatCoins_spojeno_LOOP_0015.png","CatCoins_spojeno_LOOP_0047.png","CatCoins_spojeno_LOOP_0063.png","CatCoins_spojeno_LOOP_0065.png","CatCoins_spojeno_LOOP_0077.png","CatCoins_spojeno_LOOP_0079.png","CatCoins_spojeno_LOOP_0103.png","CatCoins_spojeno_LOOP_0107.png","CatCoins_spojeno_LOOP_0109.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bigWin-3.png",
+	"format": "RGBA8888",
+	"size": {"w":2046,"h":2038},
+	"scale": "1",
+	"related_multi_packs": [ "bigWin-0.json", "bigWin-1.json", "bigWin-2.json", "bigWin-4.json", "bigWin-5.json", "bigWin-6.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:51676c6330e927ae9508e17bb2197df8:6fdcb644ba145c840e0654643fd547b2:707e69a339137999535a9523c2f81fe0$"
+}
+}

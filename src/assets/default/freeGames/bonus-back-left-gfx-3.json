@@ -1,0 +1,43 @@
+{"frames": {
+
+"left_bonus_ani7.png":
+{
+	"frame": {"x":0,"y":0,"w":364,"h":900},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":364,"h":900},
+	"sourceSize": {"w":364,"h":900},
+	"anchor": {"x":0,"y":0}
+},
+"left_bonus_ani8.png":
+{
+	"frame": {"x":364,"y":0,"w":364,"h":900},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":364,"h":900},
+	"sourceSize": {"w":364,"h":900},
+	"anchor": {"x":0,"y":0}
+},
+"left_bonus_ani9.png":
+{
+	"frame": {"x":728,"y":0,"w":364,"h":900},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":364,"h":900},
+	"sourceSize": {"w":364,"h":900},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+	"left_bonus_ani": ["left_bonus_ani7.png","left_bonus_ani8.png","left_bonus_ani9.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bonus-back-left-gfx-3.png",
+	"format": "RGBA8888",
+	"size": {"w":1092,"h":900},
+	"scale": "1",
+	"related_multi_packs": [ "bonus-back-left-gfx-0.json", "bonus-back-left-gfx-1.json", "bonus-back-left-gfx-2.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:206260ff0e0419a34a8b9b212b7fc11e:4497aa99e927e43e74b298402b0424c7:c62f88b8b5378893777f1e710d96a5de$"
+}
+}

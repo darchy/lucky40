@@ -1,0 +1,40 @@
+{"frames": {
+
+"free-popup.png":
+{
+	"frame": {"x":0,"y":773,"w":985,"h":652},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":985,"h":652},
+	"sourceSize": {"w":985,"h":652},
+	"anchor": {"x":0,"y":0}
+},
+"ReelsBonusBackground.png":
+{
+	"frame": {"x":0,"y":0,"w":1273,"h":773},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1273,"h":773},
+	"sourceSize": {"w":1273,"h":773},
+	"anchor": {"x":0,"y":0}
+},
+"won-free-popup.png":
+{
+	"frame": {"x":985,"y":773,"w":985,"h":652},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":985,"h":652},
+	"sourceSize": {"w":985,"h":652},
+	"anchor": {"x":0,"y":0}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bonus-gfx-5.png",
+	"format": "RGBA8888",
+	"size": {"w":1970,"h":1425},
+	"scale": "1",
+	"related_multi_packs": [ "bonus-gfx-0.json", "bonus-gfx-1.json", "bonus-gfx-2.json", "bonus-gfx-3.json", "bonus-gfx-4.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:cde6e0c8c32cae245179c8d2891dd054:f6290714bbf6bdb0a2e385feafabe1cd:8a2aea1d89a0edaa4a5d86702007cef6$"
+}
+}

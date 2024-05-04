@@ -1,0 +1,1128 @@
+{
+    "canvas": { "width": 1920, "height": 1080, "transparentBackground": true, "backgroundColor": "#000000", "containerId": "gameContainer" },
+    "stages": [
+        { "id": 0, "zIndex": 1, "halign": "center", "valign": "middle" },
+        { "id": 1, "zIndex": 2, "halign": "center", "valign": "bottom" },
+        { "id": 2, "zIndex": 3, "halign": "left", "valign": "top" },
+        { "id": 3, "zIndex": 4, "halign": "left", "valign": "bottom" },
+        { "id": 4, "zIndex": 5, "halign": "right", "valign": "top" },
+        { "id": 5, "zIndex": 6, "halign": "right", "valign": "middle" },
+        { "id": 6, "zIndex": 7, "halign": "left", "valign": "middle" },
+        { "id": 7, "zIndex": 0, "halign": "left", "valign": "top", "proportional": false }
+    ],
+    "layouts": [
+        {
+            "aspects": "1,1.33,1.6,1.77",
+            "components": [
+                {
+                    "id": "background",
+                    "stage": 7,
+                    "addToStage": true,
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 0,
+                    "halign": "left",
+                    "valign": "top",
+                    "subcomponents": [
+                        { "id": "gameBackground", "type": "sprite", "width": 1600, "height": 900, "halign": "left", "valign": "top", "zIndex": 0, "sheetId": "interface0", "frameId": "mainBackground.png" },
+                        { "id": "freeGamesBackground", "type": "container", "width": 1600, "height": 900, "halign": "left", "valign": "top", "zIndex": 1, "visible": false, "children": [
+                            { "id": "background", "type": "sprite", "width": 1600, "height": 900, "halign": "left", "valign": "top", "sheetId": "freeGames0", "zIndex": 0, "frameId": "BonusBackgroundAnim/bonus-bcg-0.png" },
+                            { "id": "bckAnimation", "type": "animation", "width": 1600, "height": 900, "halign": "center", "valign": "bottom", "zIndex": 1, "autoplay": true, "speed": 0.1, "animationIds": [
+                                { "sheetId": "freeGames1", "animationId": "BonusBackgroundAnim/bonus-bcg" },
+                                { "sheetId": "freeGames2", "animationId": "BonusBackgroundAnim/bonus-bcg" },
+                                { "sheetId": "freeGames3", "animationId": "BonusBackgroundAnim/bonus-bcg" },
+                                { "sheetId": "freeGames4", "animationId": "BonusBackgroundAnim/bonus-bcg" }
+                            ]}
+                        ]},
+                        { "id": "gambleBackground", "type": "sprite", "width": 1600, "height": 900, "halign": "left", "valign": "top", "zIndex": 2, "visible": false, "sheetId": "gamble0", "frameId": "background.jpg" }
+                    ]
+                },
+                {
+                    "id": "autoplayStarter",
+                    "stage": 0,
+                    "addToStage": false
+                },
+                {
+                    "id": "help",
+                    "stage": 0,
+                    "addToStage": true,
+                    "width": "100%",
+                    "height": "85%",
+                    "zIndex": 100,
+                    "halign": "center",
+                    "valign": "top",
+                    "top": 40,
+                    "subcomponents": [
+                        { "id": "background", "type": "graphic", "width": "100%", "height": "100%", "radius": 20, "color": "0x000000", "opacity": 0.8, "zIndex": 0, "halign": "left", "valign": "top" },
+                        { "id": "previous_button", "type": "button", "buttonMode": true, "width": 50, "height": 67, "halign": "left", "valign": "bottom", "top": -20, "left": 20, "zIndex": 1, "states": [
+                            { "state": "idle", "sheetId": "help0", "frameId": "LeftBtn.png" },
+                            { "state": "down", "sheetId": "help0", "frameId": "LeftBtn.png" },
+                            { "state": "disabled", "sheetId": "help0", "frameId": "LeftBtn.png" }
+                        ] },
+                        { "id": "next_button", "type": "button", "buttonMode": true, "width": 50, "height": 67, "halign": "right", "valign": "bottom", "top": -20, "left": -20, "zIndex": 2, "states": [
+                            { "state": "idle", "sheetId": "help0", "frameId": "RightBtn.png" },
+                            { "state": "down", "sheetId": "help0", "frameId": "RightBtn.png" },
+                            { "state": "disabled", "sheetId": "help0", "frameId": "RightBtn.png" }
+                        ] },
+                        { "id": "exit_button", "type": "button", "buttonMode": true, "width": 50, "height": 50, "halign": "right", "valign": "top", "top": 20, "left": -20, "zIndex": 3, "states": [
+                            { "state": "idle", "sheetId": "help0", "frameId": "CloseBtn.png" },
+                            { "state": "down", "sheetId": "help0", "frameId": "CloseBtn.png" },
+                            { "state": "disabled", "sheetId": "help0", "frameId": "CloseBtn.png" }
+                        ] },
+                        { "id": "page1", "type": "container", "width": "100%", "height": "100%", "zIndex": 4, "visible": true, "children": [
+                            { "id": "background", "type": "sprite", "width": "auto", "height": "88%", "valign": "bottom", "halign": "center", "sheetId": "help0", "frameId": "Help1.png", "zIndex": 0 },
+                            { "id": "titleText", "type": "text", "text": "GAME RULES", "zIndex": 1, "halign": "center", "valign": "top", "top": 10, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "subtitleText", "type": "text", "text": "All symbols pay from left to right on adjacent reels starting from the leftmost reel.\nThe win table shows all win combinations and their value according to chosen bet and on the winlines below.", "zIndex": 1, "halign": "center", "valign": "top", "top": 58, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "table1", "type": "container", "width": 200, "height": 155, "halign": "left", "valign": "top", "top": 155, "left": 600, "zIndex": 4, "children": [
+                                { "id": "val0", "type": "text", "text": "1000000000.00", "zIndex": 0, "halign": "right", "valign": "top", "top": 3, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val1", "type": "text", "text": "1000000000.00", "zIndex": 1, "halign": "right", "valign": "middle", "anchor": [1, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val2", "type": "text", "text": "1000000000.00", "zIndex": 2, "halign": "right", "valign": "bottom", "top": -3, "anchor": [1, 1], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }}
+                            ] },
+                            { "id": "table2", "type": "container", "width": 200, "height": 160, "halign": "left", "valign": "top", "top": 355, "left": 920, "zIndex": 5, "children": [
+                                { "id": "val0", "type": "text", "text": "1000000000.00", "zIndex": 0, "halign": "right", "valign": "top", "top": 3, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val1", "type": "text", "text": "1000000000.00", "zIndex": 1, "halign": "right", "valign": "middle", "anchor": [1, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val2", "type": "text", "text": "1000000000.00", "zIndex": 2, "halign": "right", "valign": "bottom", "top": -3, "anchor": [1, 1], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }}
+                            ] },
+                            { "id": "table3", "type": "container", "width": 200, "height": 160, "halign": "left", "valign": "top", "top": 565, "left": 480, "zIndex": 6, "children": [
+                                { "id": "val0", "type": "text", "text": "1000000000.00", "zIndex": 0, "halign": "right", "valign": "top", "top": 3, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val1", "type": "text", "text": "1000000000.00", "zIndex": 1, "halign": "right", "valign": "middle", "anchor": [1, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val2", "type": "text", "text": "1000000000.00", "zIndex": 2, "halign": "right", "valign": "bottom", "top": -3, "anchor": [1, 1], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }}
+                            ] },
+                            { "id": "table4", "type": "container", "width": 200, "height": 160, "halign": "center", "valign": "top", "top": 565, "left": 505, "zIndex": 7, "children": [
+                                { "id": "val0", "type": "text", "text": "1000000000.00", "zIndex": 0, "halign": "right", "valign": "top", "top": 3, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val1", "type": "text", "text": "1000000000.00", "zIndex": 1, "halign": "right", "valign": "middle", "anchor": [1, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val2", "type": "text", "text": "1000000000.00", "zIndex": 2, "halign": "right", "valign": "bottom", "top": -3, "anchor": [1, 1], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }}
+                            ] },
+                            { "id": "table5", "type": "container", "width": 200, "height": 156, "halign": "center", "valign": "top", "top": 722, "left": 60, "zIndex": 8, "children": [
+                                { "id": "val0", "type": "text", "text": "1000000000.00", "zIndex": 0, "halign": "right", "valign": "top", "top": 3, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val1", "type": "text", "text": "1000000000.00", "zIndex": 1, "halign": "right", "valign": "middle", "anchor": [1, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }},
+                                { "id": "val2", "type": "text", "text": "1000000000.00", "zIndex": 2, "halign": "right", "valign": "bottom", "top": -3, "anchor": [1, 1], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 40,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "right",
+                                    "stroke": "#000000",
+                                    "strokeThickness": 5
+                                }}
+                            ] }
+                        ] },
+                        { "id": "page2", "type": "container", "width": "100%", "height": "100%", "zIndex": 5, "visible": false, "children": [
+                            { "id": "background", "type": "sprite", "width": "auto", "height": "80%", "valign": "middle", "halign": "center", "sheetId": "help0", "frameId": "Help3.png", "zIndex": 0 },
+                            { "id": "titleText", "type": "text", "visible": false, "text": "GAME RULES", "zIndex": 1, "halign": "center", "valign": "top", "top": 10, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line1", "type": "text", "visible": false, "text": "All line pay symbols must appear on a played line and on consecutive reels, beginning with the far left reel.\nOnly the highest line win is paid on each line played.\nLine wins are multiplied by the number of credits bet on the winning line.", "zIndex": 1, "halign": "center", "valign": "top", "top": 80, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "seven", "type": "container", "width": 200, "height": 200, "halign": "left", "valign": "center", "left": 200, "top": -145, "zIndex": 3, "children": [
+                                { "id": "sevenSymbol", "type": "sprite", "width": 200, "height": "auto", "sheetId": "help0", "frameId": "wild-help.png", "zIndex": 0, "halign": "left", "valign": "top" }
+                            ] },
+                            { "id": "sevenText", "type": "text", "visible": false, "text": "SEVEN symbol is WILD and\nsubstitutes for all symbols except\nthe SCATTER STAR Symbol.\nWILD appears on all reels.", "zIndex": 1, "halign": "left", "valign": "top", "left": 640, "top":230, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center",
+                                "lineHeight": 40
+                            }},
+                            { "id": "scatter", "type": "container", "width": 200, "height": 200, "halign": "center", "valign": "center", "left": 120, "top": -145, "zIndex": 3, "children": [
+                                { "id": "scatterSymbol", "type": "sprite", "width": 200, "height": "auto", "sheetId": "help0", "frameId": "scatter-help.png", "zIndex": 0, "halign": "left", "valign": "top" }
+                            ] },
+                            { "id": "scatterText", "type": "text", "visible": false, "text": "Scatter wins are awarded for symbols\nappearing in any position on the reels for\nany number of played lines.\nOnly the highest scatter win is paid each\ngame.\nScattered wins are added to pay line wins.", "zIndex": 1, "halign": "center", "valign": "top", "left": 530, "top":230, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center",
+                                "lineHeight": 40
+                            }},
+                            { "id": "winLines", "type": "container", "width": "55%", "height": 210, "halign": "center", "valign": "bottom", "left":200, "top": -210, "zIndex": 3, "children": [
+                                { "id": "line1", "type": "sprite", "width": 700, "height": "auto", "sheetId": "help0", "frameId": "winlines-help.png", "zIndex": 0, "halign": "left", "valign": "top" }
+                            ] },
+                            { "id": "line2", "type": "text", "text": "MALFUNCTION VOIDS ALL PAYS AND PLAYS.\nTheoretical RTP of the game is minimum 92%\nHigh volatility games pay out less often but the chance to hit big wins in a short time span is higher.", "zIndex": 1, "halign": "center", "valign": "top", "top": 820, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }}
+                        ] },
+                        { "id": "page3", "type": "container", "width": "100%", "height": "100%", "zIndex": 7, "visible": false, "children": [
+                            { "id": "background", "type": "sprite", "width": "auto", "height": "94%", "valign": "bottom", "halign": "center", "top": -5, "sheetId": "help1", "frameId": "Help2.png", "zIndex": 0 },
+                            { "id": "titleText", "type": "text", "text": "GAME RULES", "zIndex": 1, "halign": "center", "valign": "top", "top": 10, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }}
+                        ] },
+                        { "id": "page4", "type": "container", "width": "100%", "height": "100%", "zIndex": 8, "visible": false, "children": [
+                            { "id": "titleText", "type": "text", "text": "HOW TO PLAY", "zIndex": 1, "halign": "center", "valign": "top", "top": 10, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line1", "type": "textMixed", "text": "Settings button [img:small-icon-menu.png] opens settings menu that contain settings which affects the way the game is being played per each login.", "zIndex": 1, "halign": "center", "valign": "top", "top": 130, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line2", "type": "textMixed", "text": "In game settings menu adjust number of lines and bet per line that you want to use in the game.", "zIndex": 1, "halign": "center", "valign": "top", "top": 205, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line3", "type": "textMixed", "text": "Help [img:small-icon-info.png] opens information game page", "zIndex": 2, "halign": "center", "valign": "top", "top": 270, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line4", "type": "textMixed", "text": "CREDIT and BET labels show the current balance and current total bet", "zIndex": 3, "halign": "center", "valign": "top", "top": 355, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line5", "type": "textMixed", "text": "Start [img:small-icon-spin.png] starts the game" , "zIndex": 3, "halign": "center", "valign": "top", "top": 410, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line6", "type": "textMixed", "text": "Exit [img:small-icon-exit.png] exit the game" , "zIndex": 3, "halign": "center", "valign": "top", "top": 480, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line7", "type": "textMixed", "text": "Autoplay [img:small-icon-autoplay.png] start automatic game play" , "zIndex": 3, "halign": "center", "valign": "top", "top": 550, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line8", "type": "textMixed", "text": "Left button [img:small-icon-left.png] and Right button [img:small-icon-right.png] scroll between information pages" , "zIndex": 3, "halign": "center", "valign": "top", "top": 620, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line9", "type": "textMixed", "text": "Close button [img:small-icon-close.png] closes the information screen" , "zIndex": 3, "halign": "center", "valign": "top", "top": 700, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line10", "type": "textMixed", "text": "Space on the keyboard can be used to start or stop spin." , "zIndex": 3, "halign": "center", "valign": "top", "top": 770, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }}
+                        ] },
+                        { "id": "page5", "type": "container", "width": "100%", "height": "100%", "zIndex": 9, "visible": false, "children": [
+                            { "id": "titleText", "type": "text", "text": "AUTOPLAY", "zIndex": 1, "halign": "center", "valign": "top", "top": 10, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line1", "type": "textMixed", "text": "Click and hold the Start button [img:small-icon-spin.png] in game until start Autoplay function [img:small-icon-autoplay.png] start.", "zIndex": 1, "halign": "center", "valign": "top", "top": 130, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center"
+                            }},
+                            { "id": "line2", "type": "text", "text": "STOP AUTOPLAY\n\nAFTER ANY WIN - just press Start and Autoplay function will stop.\nIF FEATURE IS WON - whenever a feature like bonus or free spin is won, Autoplay will stop.\nIF SINGLE WIN EXCEEDS - whenewer a single win is above the sum written in this field, Autoplay will stop.\nIF CREDIT INCREASES BY - whenever your current balance is above the sum written in this field, Autoplay will stop.\nIF CREDIT DECREASES BY - whenever your current balance is below the sum written in this field, Autoplay will stop.", "zIndex": 1, "halign": "center", "valign": "top", "top": 300, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center",
+                                "lineHeight": 40
+                            }},
+                            { "id": "gameVersion_value", "type": "text", "text": "GAME VERSION\n0.0.1", "zIndex": 2, "halign": "center", "valign": "bottom", "top": -120, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 25,
+                                "fontWeight": "bold",
+                                "fill": "#ffffff",
+                                "align": "center",
+                                "lineHeight": 40
+                            }}
+                        ] }
+                    ]
+                },
+                {
+                    "id": "reels",
+                    "halign": "center",
+                    "valign": "top",
+                    "zIndex": 1,
+                    "stage": 0,
+                    "width": "100%",
+                    "height": "100%",
+                    "subcomponents": [
+                        { "id": "gameName", "type": "sprite", "width": "auto", "height": "16%", "halign": "center", "top": 0, "zIndex": 8, "sheetId": "interface0", "frameId": "logo.png" },
+                        { "id": "backgrounds", "type": "container", "width": 1560, "height": 780, "top": 150, "halign": "center", "zIndex": 1, "children": [
+                            { "id": "background", "type": "container", "width": 1560, "height": 780, "zIndex": 0, "children": [
+                                { "id": "background", "type": "sprite", "width": 1280, "height": 720, "valign": "middle", "halign": "center", "zIndex": 1, "sheetId": "interface0", "frameId": "mainReelsBackground.png" },
+                                { "id": "winLineLeft", "type": "sprite", "width": "auto", "height": 733, "valign": "middle", "halign": "left", "left": 42, "zIndex": 3, "sheetId": "winlines2", "frameId": "40-linebuttons-left.png" },
+                                { "id": "winLineRight", "type": "sprite", "width": "auto", "height": 733, "valign": "middle", "halign": "right", "left": -50, "zIndex": 4, "sheetId": "winlines2", "frameId": "40-linebuttons-right.png" }
+                            ] },
+                            { "id": "freeGamesBackground", "type": "sprite", "width": 1564, "height": 950, "zIndex": 2, "sheetId": "freeGames5", "frameId": "ReelsBonusBackground.png", "visible": false }
+                        ]},
+                        { "id": "reelHolder0", "type": "container", "top": 188, "left": 330, "zIndex": 3 },
+                        { "id": "reelHolder1", "type": "container", "top": 188, "left": 584, "zIndex": 3 },
+                        { "id": "reelHolder2", "type": "container", "top": 188, "left": 839, "zIndex": 3 },
+                        { "id": "reelHolder3", "type": "container", "top": 188, "left": 1094, "zIndex": 3 },
+                        { "id": "reelHolder4", "type": "container", "top": 188, "left": 1349, "zIndex": 3 },
+                        { "id": "winLines", "type": "container","visible": false, "width": "85%", "height": 950, "top": 70, "halign": "center", "zIndex": 4, "children": [
+                            { "id": "winLine1", "type": "sprite", "width": 2000, "height": "auto", "top": -5, "halign": "center", "valign": "middle", "zIndex": 1, "sheetId": "winlines0", "frameId": "l1.png" },
+                            { "id": "winLine2", "type": "sprite", "width": 2000, "height": "auto", "top": -100, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l2.png" },
+                            { "id": "winLine3", "type": "sprite", "width": 2000, "height": "auto", "top": 67, "halign": "center", "valign": "bottom", "zIndex": 1, "sheetId": "winlines0", "frameId": "l3.png" },
+                            { "id": "winLine4", "type": "sprite", "width": 2000, "height": "auto", "top": -112, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l4.png" },
+                            { "id": "winLine5", "type": "sprite", "width": 2000, "height": "auto", "top": -100, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l5.png" },
+                            { "id": "winLine6", "type": "sprite", "width": 2000, "height": "auto", "top": -100, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l6.png" },
+                            { "id": "winLine7", "type": "sprite", "width": 2000, "height": "auto", "top": -90, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l7.png" },
+                            { "id": "winLine8", "type": "sprite", "width": 2000, "height": "auto", "top": -105, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l8.png" },
+                            { "id": "winLine9", "type": "sprite", "width": 2000, "height": "auto", "top": -100, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines1", "frameId": "l9.png" },
+                            { "id": "winLine10", "type": "sprite", "width": 2000, "height": "auto", "top": -100, "halign": "center", "valign": "top", "zIndex": 1, "sheetId": "winlines0", "frameId": "l10.png" }
+                        ]},
+                        { "id": "fiveOfAKind", "type": "animation", "width": "70%", "height": "auto", "halign": "center", "valign": "middle", "top": 40, "zIndex": 7, "autoplay": false, "loop": false, "visible": false, "speed": 0.6, "animationIds": [
+                            { "sheetId": "animations0", "animationId": "5OK/5 of kind" },
+                            { "sheetId": "animations1", "animationId": "5OK/5 of kind" },
+                            { "sheetId": "animations2", "animationId": "5OK/5 of kind" },
+                            { "sheetId": "animations3", "animationId": "5OK/5 of kind" },
+                            { "sheetId": "animations4", "animationId": "5OK/5 of kind" }
+                        ]}
+                    ]
+                },
+                {
+                    "id": "statusLine",
+                    "valign": "bottom",
+                    "halign": "center",
+                    "zIndex": 2,
+                    "stage": 1,
+                    "subcomponents": [
+                        { "id": "statusText", "type": "text", "zIndex": 0, "top": -133, "halign": "bottom", "anchor": [0.5, 1], "style": {
+                            "fontFamily": "Arial",
+                            "fontSize": 27,
+                            "fontWeight": "bold",
+                            "fill": "#ffffff",
+                            "align": "center",
+                            "dropShadow": true,
+                            "dropShadowColor": "#000000",
+                            "dropShadowBlur": 5,
+                            "dropShadowAngle": 0.8,
+                            "dropShadowDistance": 2,
+                            "stroke": "#000000",
+                            "strokeThickness": 5
+                        }}
+                    ]
+                },
+                {
+                    "id": "betPanel",
+                    "halign": "center",
+                    "valign": "middle",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 3,
+                    "stage": 6,
+                    "addToStage": true,
+                    "subcomponents": [
+                        { "id": "enterGambleButton", "type": "button", "width": 250, "height": 250, "halign": "left", "valign": "middle", "left": 10, "zIndex": 7, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "gamblebtn.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "gamblebtn.png" }
+                        ]}
+                    ]
+                },
+                {
+                    "id": "betPanel1",
+                    "halign": "right",
+                    "valign": "bottom",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 1,
+                    "stage": 5,
+                    "addToStage": true,
+                    "subcomponents": [
+                        { "id": "spinButton", "type": "button", "width": 250, "height": 250, "halign": "right", "valign": "middle", "left": -10, "zIndex": 3, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "spinbtn-anim-1.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "spinbtn-anim-1.png" }
+                        ]},
+                        { "id": "speedUpButton", "type": "button", "width": 250, "height": 250, "halign": "right", "valign": "middle", "left": -10, "zIndex": 4, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "spinbtn-anim-1.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "spinbtn-anim-1.png" }
+                        ]},
+                        { "id": "collectButton", "type": "button", "width": 250, "height": 250, "halign": "right", "valign": "middle", "left": -10, "zIndex": 5, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "collectbtn.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "collectbtn.png" }
+                        ]},
+                        { "id": "autoplayButton", "type": "button", "width": 250, "height": 250, "halign": "right", "valign": "middle", "left": -10, "zIndex": 6, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "spinbtn-anim-6.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "spinbtn-anim-6.png" }
+                        ]},
+                        { "id": "autoplayAnimation", "type": "animation", "width": 250, "height": 250, "halign": "right", "valign": "middle", "left": -10, "zIndex": 0, "sheetId": "betPanel", "animationId": "spinbtn-anim", "autoplay": false, "speed": 0.13, "loop": false, "visible": false }
+                    ]
+                },
+                {
+                    "id": "console",
+                    "halign": "center",
+                    "valign": "bottom",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 0,
+                    "stage": 1,
+                    "addToStage": true,
+                    "subcomponents": [
+                        { "id": "meters", "type": "container", "width": 1500, "height": 142, "halign": "center", "valign": "bottom", "zIndex": 0, "children": [
+                            { "id": "background", "type": "sprite", "width": "100%", "height": "150%", "halign": "center", "valign": "top", "zIndex": 0, "sheetId": "betPanel", "frameId": "InfoBarBcg.png", "blendMode": "multiply" },
+                            { "id": "betSection", "type": "container", "width": 346, "height": 90, "halign": "left", "valign": "bottom", "left": 90, "top": -25, "zIndex": 3, "children": [
+                                { "id": "background", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 0, "sheetId": "betPanel", "frameId": "betlinesbcg.png", "alpha": 0.8 },
+                                { "id": "stakeLabel", "type": "text", "text": "Stake", "halign": "center", "valign": "top", "top": 10, "zIndex": 1, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 30,
+                                    "fill": "#e0e0e0",
+                                    "align": "center"
+                                }},
+                                { "id": "stakeValue", "type": "text", "text": "10,000.00", "halign": "center", "valign": "top", "top": 43, "left": -10, "zIndex": 2, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Azaret-Med",
+                                    "fontSize": 30,
+                                    "fill": "#e0e0e0",
+                                    "align": "center"
+                                }},
+                                { "id": "betDecreaseButton", "type": "button", "width": 160, "height": 95, "halign": "left", "valign": "top", "top": -3, "left": 10, "zIndex": 3, "states": [
+                                    { "state": "idle", "sheetId": "betPanel", "frameId": "increasebtn.png", "noResize": true, "valign": "middle", "halign": "left", "left": 13 },
+                                    { "state": "disabled", "sheetId": "betPanel", "frameId": "increasebtn.png", "noResize": true, "valign": "middle", "halign": "left", "left": 13 }
+                                ] },
+                                { "id": "betIncreaseButton", "type": "button", "width": 160, "height": 95, "halign": "right", "valign": "top", "top": -3, "left": -10, "zIndex": 4, "states": [
+                                    { "state": "idle", "sheetId": "betPanel", "frameId": "decreasebtn.png", "noResize": true, "valign": "middle", "halign": "right", "left": -13 },
+                                    { "state": "disabled", "sheetId": "betPanel", "frameId": "decreasebtn.png", "noResize": true, "valign": "middle", "halign": "right", "left": -13 }
+                                ] }
+                            ] },
+                            { "id": "linesSection", "type": "container", "width": 346, "height": 90, "halign": "right", "valign": "bottom", "left": -90, "top": -25, "zIndex": 4, "children": [
+                                { "id": "background", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 0, "sheetId": "betPanel", "frameId": "betlinesbcg.png", "alpha": 0.8 },
+                                { "id": "linesLabel", "type": "text", "text": "Lines", "halign": "center", "valign": "top", "top": 10, "zIndex": 1, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 30,
+                                    "fill": "#e0e0e0",
+                                    "align": "center"
+                                }},
+                                { "id": "linesValue", "type": "text", "text": "10", "halign": "center", "valign": "top", "top": 43, "left": -10 , "zIndex": 2, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Azaret-Med",
+                                    "fontSize": 30,
+                                    "fill": "#e0e0e0",
+                                    "align": "center"
+                                }},
+                                { "id": "linesDecreaseButton", "visible": false, "type": "button", "width": 160, "height": 95, "halign": "left", "valign": "top", "top": -3, "left": 10, "zIndex": 3, "states": [
+                                    { "state": "idle", "sheetId": "betPanel", "frameId": "decreasebtn.png", "noResize": true, "valign": "middle", "halign": "left", "left": 13 },
+                                    { "state": "disabled", "sheetId": "betPanel", "frameId": "decreasebtn.png", "noResize": true, "valign": "middle", "halign": "left", "left": 13 }
+                                ] },
+                                { "id": "linesIncreaseButton", "visible": false, "type": "button", "width": 160, "height": 95, "halign": "right", "valign": "top", "top": -3, "left": -10, "zIndex": 4, "states": [
+                                    { "state": "idle", "sheetId": "betPanel", "frameId": "increasebtn.png", "noResize": true, "valign": "middle", "halign": "right", "left": -13 },
+                                    { "state": "disabled", "sheetId": "betPanel", "frameId": "increasebtn.png", "noResize": true, "valign": "middle", "halign": "right", "left": -13 }
+                                ] }
+                            ] },
+                            { "id": "balanceSection", "type": "container", "width": 524, "height": 105, "halign": "center", "valign": "bottom", "top": -28, "zIndex": 5, "children": [
+                                { "id": "balanceBck", "type": "sprite", "width": "100%", "height": "100%", "halign": "center", "valign": "bottom", "zIndex": 0, "sheetId": "betPanel", "frameId": "creditbcg.png", "alpha": 0.8 },
+                                { "id": "balanceLabel", "type": "text", "text": "BALANCE (EUR)", "halign": "left", "valign": "top", "top": 50, "left": 40, "zIndex": 1, "anchor": [0, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 33,
+                                    "fill": "#ffff00",
+                                    "align": "center"
+                                }},
+                                { "id": "balanceValue", "type": "text", "text": "1,000,000.00", "halign": "right", "valign": "top", "top": 52, "left": -40, "zIndex": 2, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Azaret-Med",
+                                    
+                                    "fontSize": 33,
+                                    "fill": "#ffff00",
+                                    "align": "center"
+                                }},
+                                { "id": "winLabel", "type": "text", "text": "WIN", "halign": "left", "valign": "top", "top": 8, "left": 40, "zIndex": 3, "anchor": [0, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 30,
+                                    "fill": "#ffff00",
+                                    "align": "center"
+                                }},
+                                { "id": "winValue", "type": "text", "text": "450,000.00", "halign": "right", "valign": "top", "top": 10, "left": -40, "zIndex": 4, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Azaret-Med",
+                                    
+                                    "fontSize": 30,
+                                    "fill": "#ffff00",
+                                    "align": "center"
+                                }}
+                            ] },
+                            { "id": "fgFeatureBalanceSection", "type": "container", "width": 346, "height": 90, "halign": "right", "valign": "bottom", "left": -90, "top": -20, "zIndex": 3, "visible": false, "children": [
+                                { "id": "background", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 0, "sheetId": "betPanel", "frameId": "FeatureCreditsBCG.png" },
+                                { "id": "featureBalanceLabel", "type": "text", "text": "Balance (EUR)", "halign": "center", "valign": "top", "top": 4, "zIndex": 1, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 30,
+                                    "fill": "#ffffff",
+                                    "align": "center"
+                                }},
+                                { "id": "featureBalanceValue", "type": "text", "text": "10,000.00", "halign": "center", "valign": "top", "top": 35, "zIndex": 2, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Noto-Sans",
+                                    "fontSize": 41,
+                                    "fill": "#ffffff",
+                                    "align": "center"
+                                }}
+                            ] },
+                            { "id": "fgFeatureWinSection", "type": "container", "width": 920, "height": 105, "halign": "left", "valign": "bottom", "left": 50, "top": -13, "zIndex": 5, "visible": false, "children": [
+                                { "id": "fgFeatureWinBck", "type": "sprite", "width": "100%", "height": "100%", "halign": "center", "valign": "bottom", "zIndex": 0, "sheetId": "betPanel", "frameId": "FeatureGameBonusBCG.png" },
+                                { "id": "featureWinLabel", "type": "text", "text": "FEATURE WIN (EUR)", "halign": "left", "valign": "top", "top": 13, "left": 200, "zIndex": 1, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 30,
+                                    "fill": "#ffff00",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2
+                                }},
+                                { "id": "featureWinValue", "type": "text", "text": "1,000,000.00", "halign": "left", "valign": "top", "top": 43, "left": 200, "zIndex": 2, "anchor": [0.5, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 45,
+                                    "fill": "#ffff00",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2
+                                }}
+                            ] },
+                            { "id": "fgFeatureGamesSection", "type": "container", "width": 500, "height": 90, "halign": "center", "valign": "center", "left": -50, "top": -35, "zIndex": 6, "visible": false, "children": [
+                                { "id": "featureGameLabel", "type": "text", "text": "FREE SPINS:", "halign": "left", "valign": "center", "zIndex": 1, "anchor": [0, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 45,
+                                    "fill": "#ffff00",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2
+                                }},
+                                { "id": "featureGameValue", "type": "text", "text": "10/10", "halign": "right", "valign": "center", "zIndex": 2, "anchor": [1, 0], "style": {
+                                    "fontFamily": "Rubik-Bold",
+                                    "fontSize": 45,
+                                    "fill": "#ffff00",
+                                    "align": "right",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2
+                                }}
+                            ] }
+                        ] }
+                    ]
+                },
+                {
+                    "id": "floatingButtonHome",
+                    "halign": "center",
+                    "valign": "middle",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 1,
+                    "stage": 2,
+                    "addToStage": true,
+                    "subcomponents": [
+                        { "id": "exitButton", "type": "button", "buttonMode": true, "width": 148, "height": 148, "halign": "left", "valign": "top", "top": 25, "left": 10, "zIndex": 0, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "backtolobbybtn.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "backtolobbybtn.png" }
+                        ] },
+                        { "id": "soundOnButton", "type": "button", "buttonMode": true, "width": 148, "height": 148, "halign": "left", "valign": "top", "top": 198, "left": 10, "zIndex": 1, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "settings/SoundBtn-ON.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "settings/SoundBtn-ON.png" }
+                        ] },
+                        { "id": "soundOffButton", "type": "button", "buttonMode": true, "width": 148, "height": 148, "halign": "left", "valign": "top", "top": 198, "left": 10, "zIndex": 2, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "settings/SoundBtn-OFF.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "settings/SoundBtn-OFF.png" }
+                        ] }
+                    ]
+                },
+                {
+                    "id": "floatingButtonGamble",
+                    "halign": "center",
+                    "valign": "middle",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 1,
+                    "stage": 3,
+                    "addToStage": true,
+                    "subcomponents": [
+                        { "id": "gambleOnButton", "type": "button", "buttonMode": true, "width": 148, "height": 148, "halign": "left", "valign": "bottom", "top": -15, "left": 10, "zIndex": 1, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "settings/GambleBtn-ON.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "settings/GambleBtn-ON.png" }
+                        ] },
+                        { "id": "gambleOffButton", "type": "button", "buttonMode": true, "width": 148, "height": 148, "halign": "left", "valign": "bottom", "top": -15, "left": 10, "zIndex": 2, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "settings/GambleBtn-OFF.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "settings/GambleBtn-OFF.png" }
+                        ] }
+                    ]
+                },
+                {
+                    "id": "floatingButtonHelp",
+                    "halign": "center",
+                    "valign": "middle",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 1,
+                    "stage": 4,
+                    "addToStage": true,
+                    "subcomponents": [
+                        { "id": "helpButton", "type": "button", "buttonMode": true, "width": 148, "height": 148, "halign": "right", "valign": "top", "top": 25, "left": -10, "zIndex": 2, "states": [
+                            { "state": "idle", "sheetId": "betPanel", "frameId": "infobtn.png" },
+                            { "state": "disabled", "sheetId": "betPanel", "frameId": "infobtn.png" }
+                        ] }
+                    ]
+                },
+                {
+                    "id": "winCounter",
+                    "halign": "center",
+                    "valign": "bottom",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 5,
+                    "stage": 1,
+                    "subcomponents": [
+                        { "id": "coinsShower", "type": "animation", "width": "auto", "height": "70%", "halign": "center", "valign": "bottom", "zIndex": 1, "autoplay": false, "speed": 0.3, "visible": false, "animationIds": [
+                            { "sheetId": "bigWin0", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin1", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin2", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin3", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin4", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin5", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin6", "animationId": "CatCoins_spojeno_LOOP" }
+                        ]},
+                        { "id": "counter", "type": "text", "halign": "center", "valign": "bottom", "top": -105, "zIndex": 2, "anchor": [0.5, 1], "style": {
+                            "fontFamily": "Arial",
+                            "fontSize": 150,
+                            "fontWeight": "bold",
+                            "fill": ["#ffff99", "#ffcc99"],
+                            "align": "center",
+                            "dropShadow": true,
+                            "dropShadowColor": "#000000",
+                            "dropShadowBlur": 5,
+                            "dropShadowAngle": 0.8,
+                            "dropShadowDistance": 10,
+                            "stroke": "#000000",
+                            "strokeThickness": 5
+                        }},
+                        { "id": "winCoins", "type": "animation", "width": 700, "height": "auto", "halign": "center", "valign": "bottom", "top": -55, "zIndex": 3, "sheetId": "animations0", "animationId": "winCoins/wincoins_anim", "autoplay": false, "speed": 0.5, "loop": false, "visible": false }
+                    ]
+                },
+                {
+                    "id": "freeGames",
+                    "width": "100%",
+                    "height": "100%",
+                    "valign": "middle",
+                    "halign": "center",
+                    "zIndex": 4,
+                    "stage": 0,
+                    "subcomponents": [
+                        { "id": "plaque", "type": "container", "width": 922, "height": 716, "valign": "middle", "halign": "center", "top": -30, "zIndex": 0, "children": [
+                            { "id": "background", "type": "sprite", "width": "100%", "height": "100%", "halign": "center", "valign": "middle", "zIndex": 0, "sheetId": "freeGames5", "frameId": "free-popup.png" },
+                            { "id": "background1", "type": "sprite", "width": "100%", "height": "100%", "halign": "center", "valign": "middle", "zIndex": 0, "sheetId": "freeGames5", "frameId": "won-free-popup.png" },
+                            { "id": "totalWin_value", "type": "textSprite", "valign": "middle", "halign": "center", "top": 30, "zIndex": 1, "anchor": [0.5, 0.5], "spaceWidth": 15, "sheetIds": [
+                                "animations0"
+                            ], "typography": {
+                                "0": "winPopUpFont/WinPopUpFont_0.png",
+                                "1": "winPopUpFont/WinPopUpFont_1.png",
+                                "2": "winPopUpFont/WinPopUpFont_2.png",
+                                "3": "winPopUpFont/WinPopUpFont_3.png",
+                                "4": "winPopUpFont/WinPopUpFont_4.png",
+                                "5": "winPopUpFont/WinPopUpFont_5.png",
+                                "6": "winPopUpFont/WinPopUpFont_6.png",
+                                "7": "winPopUpFont/WinPopUpFont_7.png",
+                                "8": "winPopUpFont/WinPopUpFont_8.png",
+                                "9": "winPopUpFont/WinPopUpFont_9.png",
+                                ".": "winPopUpFont/WinPopUpFont_.png",
+                                ",": "winPopUpFont/WinPopUpFont_,.png"
+                            }}
+                        ]},
+                        { "id": "featureGame", "type": "container", "width": 353, "height": 106, "valign": "top", "halign": "left", "top": 10, "left": 10, "zIndex": 1, "children": [
+                            { "id": "background", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 0, "sheetId": "freeGames0", "frameId": "bonus-futurewin-futuregames-bcg.png" },
+                            { "id": "featureGameLabel", "type": "text", "halign": "center", "valign": "top", "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": ["#ffff99", "#ffcc99"],
+                                "align": "center",
+                                "dropShadow": true,
+                                "dropShadowColor": "#000000",
+                                "dropShadowBlur": 5,
+                                "dropShadowAngle": 0.8,
+                                "dropShadowDistance": 10,
+                                "stroke": "#000000",
+                                "strokeThickness": 2
+                            }},
+                            { "id": "featureGameValue", "type": "text", "halign": "center", "valign": "bottom", "anchor": [0.5, 1], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": ["#ffff99", "#ffcc99"],
+                                "align": "center",
+                                "dropShadow": true,
+                                "dropShadowColor": "#000000",
+                                "dropShadowBlur": 5,
+                                "dropShadowAngle": 0.8,
+                                "dropShadowDistance": 10,
+                                "stroke": "#000000",
+                                "strokeThickness": 2
+                            }}
+                        ]},
+                        { "id": "featureWin", "type": "container", "width": 353, "height": 106, "valign": "top", "halign": "right", "top": 10, "left": -10, "zIndex": 2, "children": [
+                            { "id": "background", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 0, "sheetId": "freeGames0", "frameId": "bonus-futurewin-futuregames-bcg.png" },
+                            { "id": "featureWinLabel", "type": "text", "halign": "center", "valign": "top", "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": ["#ffff99", "#ffcc99"],
+                                "align": "center",
+                                "dropShadow": true,
+                                "dropShadowColor": "#000000",
+                                "dropShadowBlur": 5,
+                                "dropShadowAngle": 0.8,
+                                "dropShadowDistance": 10,
+                                "stroke": "#000000",
+                                "strokeThickness": 2
+                            }},
+                            { "id": "featureWinValue", "type": "text", "halign": "center", "valign": "bottom", "anchor": [0.5, 1], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 40,
+                                "fontWeight": "bold",
+                                "fill": ["#ffff99", "#ffcc99"],
+                                "align": "center",
+                                "dropShadow": true,
+                                "dropShadowColor": "#000000",
+                                "dropShadowBlur": 5,
+                                "dropShadowAngle": 0.8,
+                                "dropShadowDistance": 10,
+                                "stroke": "#000000",
+                                "strokeThickness": 2
+                            }}
+                        ]}
+                    ]
+                },
+                {
+                    "id": "coinsShower",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 6,
+                    "stage": 0,
+                    "valign": "top",
+                    "halign": "left",
+                    "subcomponents": [
+                        { "id": "coinsLeft", "type": "animation", "height": "100%", "width": "auto", "valign": "top", "halign": "left", "zIndex": 0, "speed": 0.2, "autoplay": false, "loop": true, "animationIds": [
+                            { "sheetId": "freeGamesCoinsLeft0", "animationId": "left_bonus_ani" },
+                            { "sheetId": "freeGamesCoinsLeft1", "animationId": "left_bonus_ani" },
+                            { "sheetId": "freeGamesCoinsLeft2", "animationId": "left_bonus_ani" },
+                            { "sheetId": "freeGamesCoinsLeft3", "animationId": "left_bonus_ani" }
+                        ]},
+                        { "id": "coinsRight", "type": "animation", "height": "100%", "width": "auto", "valign": "top", "halign": "right", "zIndex": 1, "speed": 0.2, "autoplay": false, "loop": true, "animationIds": [
+                            { "sheetId": "freeGamesCoinsRight0", "animationId": "right_bonus_ani" },
+                            { "sheetId": "freeGamesCoinsRight1", "animationId": "right_bonus_ani" },
+                            { "sheetId": "freeGamesCoinsRight2", "animationId": "right_bonus_ani" },
+                            { "sheetId": "freeGamesCoinsRight3", "animationId": "right_bonus_ani" }
+                        ]},
+                        { "id": "coinsCenter", "type": "animation", "width": "auto", "height": "100%", "halign": "center", "valign": "bottom", "zIndex": 2, "speed": 0.2, "autoplay": false, "loop": false, "visible": false, "animationIds": [
+                            { "sheetId": "bigWin0", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin1", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin2", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin3", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin4", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin5", "animationId": "CatCoins_spojeno_LOOP" },
+                            { "sheetId": "bigWin6", "animationId": "CatCoins_spojeno_LOOP" }
+                        ]}
+                    ]
+                },
+                {
+                    "id": "gamble",
+                    "width": "100%",
+                    "height": "100%",
+                    "zIndex": 1,
+                    "stage": 0,
+                    "valign": "top",
+                    "halign": "left",
+                    "subcomponents": [
+                        { "id": "redOrBlack", "type": "container", "width": "100%", "height": "100%", "halign": "left",  "valign": "top", "zIndex": 0, "visible": false, "children": [
+                            { "id": "title", "type": "text", "text": "Red/Black Gamble", "halign": "center", "valign": "top", "top": 40, "anchor": [0.5, 0], "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 60,
+                                "fontWeight": "bold",
+                                "fill": ["#e30000", "#ff0000"],
+                                "align": "center",
+                                "dropShadow": true,
+                                "dropShadowColor": "#000000",
+                                "dropShadowBlur": 3,
+                                "dropShadowAngle": 0.8,
+                                "dropShadowDistance": 5,
+                                "stroke": "#000000",
+                                "strokeThickness": 2
+                            }},
+                            { "id": "colorPays", "type": "container", "width": 401, "height": "20%", "halign": "right", "valign": "middle", "top": -40, "left": -230, "zIndex": 0, "children": [
+                                { "id": "colorPaysLabel", "type": "text", "text": "Red/Black to Win", "halign": "center", "valign": "top", "anchor": [0.5, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 35,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2,
+                                    "stroke": "#000000",
+                                    "strokeThickness": 2
+                                }},
+                                { "id": "colorPaysValue", "type": "text", "halign": "center", "valign": "top", "top": 45, "anchor": [0.5, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 35,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2,
+                                    "stroke": "#000000",
+                                    "strokeThickness": 2
+                                }}
+                            ]},
+                            { "id": "gambleAmount", "type": "container", "width": 700, "height": "20%", "halign": "left", "valign": "middle", "top": -40, "left": 100, "zIndex": 0, "children": [
+                                { "id": "gambleAmountLabel", "type": "text", "text": "Gamble Amount", "halign": "center", "valign": "top", "anchor": [0.5, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 35,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2,
+                                    "stroke": "#000000",
+                                    "strokeThickness": 2
+                                }},
+                                { "id": "gambleAmountValue", "type": "text", "halign": "center", "valign": "top", "top": 45, "anchor": [0.5, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 35,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2,
+                                    "stroke": "#000000",
+                                    "strokeThickness": 2
+                                }}
+                            ]},
+                            { "id": "suitPays", "type": "container", "width": 401, "height": "20%", "halign": "right", "valign": "bottom", "top": 20, "left": -230, "zIndex": 0, "children": [
+                                { "id": "suitPaysLabel", "type": "text", "text": "Suit to Win", "halign": "center", "valign": "top", "anchor": [0.5, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 35,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2,
+                                    "stroke": "#000000",
+                                    "strokeThickness": 2
+                                }},
+                                { "id": "suitPaysValue", "type": "text", "halign": "center", "valign": "top", "top": 45, "anchor": [0.5, 0.5], "style": {
+                                    "fontFamily": "Arial",
+                                    "fontSize": 35,
+                                    "fontWeight": "bold",
+                                    "fill": "#ffffff",
+                                    "align": "center",
+                                    "dropShadow": true,
+                                    "dropShadowColor": "#000000",
+                                    "dropShadowBlur": 2,
+                                    "dropShadowAngle": 0.8,
+                                    "dropShadowDistance": 2,
+                                    "stroke": "#000000",
+                                    "strokeThickness": 2
+                                }}
+                            ]},
+                            { "id": "leftButtons", "type": "container", "width": "20%", "height": "35%", "halign": "left", "valign": "middle", "top": 120, "left": 250, "zIndex": 1, "children": [
+                                { "id": "btnDiamond", "type": "sprite", "buttonMode": true, "width": "45%", "height": "auto", "halign": "left", "valign": "bottom", "zIndex": 0, "sheetId": "gamble0", "frameId": "y_k.png" },
+                                { "id": "btnHeart", "type": "sprite", "buttonMode": true, "width": "45%", "height": "auto", "halign": "right", "valign": "bottom", "zIndex": 1, "sheetId": "gamble0", "frameId": "y_h.png" },
+                                { "id": "btnRed", "type": "button", "buttonMode": true, "width": "100%", "height": "auto", "halign": "center", "valign": "top", "zIndex": 2, "sheetId": "gamble0", "frameId": "buttRed0002.png", "states": [
+                                    { "id": "idle", "sheetId": "gamble0", "frameId": "buttRed0002.png" },
+                                    { "id": "down", "sheetId": "gamble0", "frameId": "buttRed0002.png" },
+                                    { "id": "disabled", "sheetId": "gamble0", "frameId": "buttRed0002.png" }
+                                ], "labels": [
+                                    { "id": "redTxt", "type": "text", "text": "RED", "halign": "center", "valign": "middle", "anchor": [0.5, 0.5], "style": {
+                                        "fontFamily": "Arial",
+                                        "fontSize": 45,
+                                        "fontWeight": "bold",
+                                        "fill": "#ffffff",
+                                        "align": "center",
+                                        "dropShadow": true,
+                                        "dropShadowColor": "#000000",
+                                        "dropShadowBlur": 2,
+                                        "dropShadowAngle": 0.8,
+                                        "dropShadowDistance": 2,
+                                        "stroke": "#000000",
+                                        "strokeThickness": 2
+                                    }}
+                                ]}
+                            ]},
+                            { "id": "rightButtons", "type": "container", "width": "20%", "height": "35%", "halign": "right", "valign": "middle", "top": 120, "left": -250, "zIndex": 1, "children": [
+                                { "id": "btnSpade", "type": "sprite", "buttonMode": true, "width": "45%", "height": "auto", "halign": "left", "valign": "bottom", "zIndex": 0, "sheetId": "gamble0", "frameId": "y_t.png" },
+                                { "id": "btnClub", "type": "sprite", "buttonMode": true, "width": "45%", "height": "auto", "halign": "right", "valign": "bottom", "zIndex": 1, "sheetId": "gamble0", "frameId": "y_p.png" },
+                                { "id": "btnBlack", "type": "button", "buttonMode": true, "width": "100%", "height": "auto", "halign": "center", "valign": "top", "zIndex": 2, "states": [
+                                    { "id": "idle", "sheetId": "gamble0", "frameId": "buttBlack0002.png" },
+                                    { "id": "down", "sheetId": "gamble0", "frameId": "buttBlack0002.png" },
+                                    { "id": "disabled", "sheetId": "gamble0", "frameId": "buttBlack0002.png" }
+                                ], "labels": [
+                                    { "id": "blkTxt", "type": "text", "text": "BLACK", "halign": "center", "valign": "middle", "anchor": [0.5, 0.5], "style": {
+                                        "fontFamily": "Arial",
+                                        "fontSize": 45,
+                                        "fontWeight": "bold",
+                                        "fill": "#ffffff",
+                                        "align": "center",
+                                        "dropShadow": true,
+                                        "dropShadowColor": "#000000",
+                                        "dropShadowBlur": 2,
+                                        "dropShadowAngle": 0.8,
+                                        "dropShadowDistance": 2,
+                                        "stroke": "#000000",
+                                        "strokeThickness": 2
+                                    }}
+                                ]}
+                            ]},
+                            { "id": "cards", "type": "container", "width": "50%", "height": "45%", "halign": "center", "valign": "middle", "top": 80, "zIndex": 2, "children": [
+                                { "id": "cardBack", "type": "sprite", "width": "auto", "height": "100%", "halign": "center", "valign": "top", "zIndex": 0, "sheetId": "gamble2", "frameId": "card_back_new.png" },
+                                { "id": "cards", "type": "animation", "width": "auto", "height": "100%", "halign": "center", "valign": "top", "zIndex": 1, "speed": 0.1, "autoplay": false, "loop": false, "visible": false, "animationIds": [
+                                    { "sheetId": "gamble0", "animationId": "c" },
+                                    { "sheetId": "gamble1", "animationId": "c" },
+                                    { "sheetId": "gamble2", "animationId": "c" }
+                                ]}
+                            ]},
+                            { "id": "history", "type": "container", "width": "100%", "height": "10%", "halign": "left", "valign": "top", "top": 220, "zIndex": 3, "children": [
+                                { "id": "questionMark", "type": "sprite", "width": 122, "height": "auto", "halign": "left", "valign": "top", "left": 353, "zIndex": 0, "sheetId": "gamble1", "frameId": "history_question.png" },
+                                { "id": "signsContainer", "type": "container", "width": 0, "height": "60%", "halign": "center", "valign": "top", "left": -418, "zIndex": 1 }
+                            ]},
+                            { "id": "infoText", "type": "text", "text": "GAMEBLE UP TO 5x\nGAMBLE MAX LIMIT 1000", "halign": "center", "valign": "top", "top": 130, "anchor": [0.5, 0], "zIndex": 4, "style": {
+                                "fontFamily": "Arial",
+                                "fontSize": 20,
+                                "fontWeight": "bold",
+                                "fill": "#cca402",
+                                "align": "center",
+                                "dropShadow": true,
+                                "dropShadowColor": "#000000",
+                                "dropShadowBlur": 2,
+                                "dropShadowAngle": 0.8,
+                                "dropShadowDistance": 1,
+                                "stroke": "#000000",
+                                "strokeThickness": 2
+                            }}
+                        ]}
+                    ]
+                },
+                {
+                    "id": "gameSettings",
+                    "halign": "center",
+                    "valign": "top",
+                    "zIndex": 7,
+                    "stage": 0,
+                    "width": "80%",
+                    "height": "85.6%",
+                    "top": 10,
+                    "subcomponents": [
+                        { "id": "background", "type": "graphic", "width": "100%", "height": "100%", "radius": 10, "color": "0x000000", "opacity": 0.8, "zIndex": 0, "halign": "left", "valign": "top" },
+                        { "id": "back", "type": "sprite", "buttonMode": true, "width": 46, "height": 46, "halign": "right", "valign": "top", "top": 20, "left": -30, "zIndex": 1, "sheetId": "betPanel", "frameId": "CloseBtn.png" },
+                        { "id": "titleSettings", "type": "text", "text": "SETTINGS", "halign": "center", "valign": "top", "top": 60, "anchor": [0.5, 0.5], "zIndex": 2, "style": {
+                            "fontFamily": "Rubik-Bold",
+                            "fontSize": 37,
+                            "fontWeight": "bold",
+                            "fill": "#ffffff",
+                            "align": "center"
+                        }},
+                        { "id": "titleGamble", "type": "text", "text": "GAMBLE", "halign": "center", "valign": "middle", "anchor": [0.5, 0.5], "zIndex": 3, "style": {
+                            "fontFamily": "Rubik-Bold",
+                            "fontSize": 37,
+                            "fontWeight": "bold",
+                            "fill": "#ffffff",
+                            "align": "center"
+                        }},
+                        { "id": "sound-off-icon", "type": "sprite", "buttonMode": true, "width": 165, "height": 165, "halign": "left", "valign": "top", "top": 200, "left": 80, "zIndex": 4, "sheetId": "betPanel", "frameId": "settings/SoundBtn-OFF.png" },
+                        { "id": "sound-on-icon", "type": "sprite", "buttonMode": true, "width": 165, "height": 165, "halign": "right", "valign": "top", "top": 200, "left": -80, "zIndex": 5, "sheetId": "betPanel", "frameId": "settings/SoundBtn-ON.png" },
+                        { "id": "volumeSlider", "type": "container", "width": 877, "height": 40, "halign": "center", "valign": "top", "top": 260, "zIndex": 6, "children": [
+                            { "id": "background", "type": "sprite", "width": 877, "height": 40, "zIndex": 0, "sheetId": "betPanel", "frameId": "settings/SliderBcg.png" },
+                            { "id": "fillColor", "type": "sprite", "width": 864, "height": 22, "top": 10, "left": 6, "zIndex": 1, "sheetId": "betPanel", "frameId": "settings/SlideProgress.png" },
+                            { "id": "mask", "type": "graphic", "width": 864, "height": 22, "top": 10, "left": 6, "radius": 0, "color": "0xff0000", "opacity": 1, "zIndex": 2 },
+                            { "id": "button", "type": "sprite", "buttonMode": true, "width": 124, "height": 124, "halign": "center", "valign": "middle", "zIndex": 3, "sheetId": "betPanel", "frameId": "settings/SliderBtn.png" }
+                        ] },
+                        { "id": "gamble-off-icon", "type": "sprite", "buttonMode": true, "width": 177, "height": 177, "halign": "left", "valign": "middle", "top": 190, "left": 340, "zIndex": 8, "sheetId": "betPanel", "frameId": "settings/GambleBtn-OFF.png" },
+                        { "id": "gamble-on-icon", "type": "sprite", "buttonMode": true, "width": 177, "height": 177, "halign": "right", "valign": "middle", "top": 190, "left": -340, "zIndex": 9, "sheetId": "betPanel", "frameId": "settings/GambleBtn-ON.png" },
+                        { "id": "gambleIcon", "type": "container", "width": 315, "height": 238, "halign": "center", "valign": "middle", "top": 200, "zIndex": 10, "children": [
+                            { "id": "iconOff", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 0, "sheetId": "betPanel", "frameId": "settings/GambleIcon-OFF.png" },
+                            { "id": "iconOn", "type": "sprite", "width": "100%", "height": "100%", "zIndex": 1, "sheetId": "betPanel", "frameId": "settings/GambleIcon-ON.png" }
+                        ] }
+                    ]
+                }
+            ]
+        }
+    ]
+}

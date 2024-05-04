@@ -1,0 +1,433 @@
+{
+    "components": [
+        {
+            "id": "background",
+            "dom": false,
+            "holder": "backgroundsHolder",
+            "images": [
+                { "id": "gameBackground", "path": "background/mainBackground.png", "sheetId": "interface0", "frameId": "mainBackground.png", "default": true, "description": "Regular games background" },
+                { "id": "freeGamesBackground", "path": "background/bcgBONUS.png", "sheetId": "freeGames0", "frameId": "BonusBackground.png", "description": "Free games background" },
+                { "id": "gambleBackground", "path": "background/gamble-act-bcg.png", "sheetId": "", "frameId": "", "description": "Gamble background" }
+            ]
+        },
+        {
+            "id": "reels",
+            "dom": false,
+            "speed": 85,
+            "backTime": 0.2,
+            "assets": {
+                "background": "",
+                "symbols": ["symbols0", "symbols1", "symbols2", "symbols3"],
+                "winLines": ["winlines0", "winlines1"],
+                "winFrames": ["winframes0", "winframes1"]
+            },
+            "symbolWidth": 232,
+            "symbolHeight": 173,
+            "reelsContainers": ["reelHolder0", "reelHolder1", "reelHolder2", "reelHolder3", "reelHolder4"],
+            "mainAnimationLoops": 1,
+            "use_REELS_SYMBOLS": true,
+            "symbols": [
+                { "id": 0, "sheetId": "symbols3", "frameId": "rsym7-wild.png", "wild": false, "desc": "Seven", "sound": "SymbolWild",
+                    "shortAnimation": { "sheetId": "symbols3", "animationId": "rsym7/rsym7_anim", "autoplay": false, "loop": false, "speed": 0.3 },
+                    "animation": { "sheetId": "symbols3", "animationId": "rsym7/rsym7_anim", "autoplay": false, "loop": false, "speed": 0.3 }
+                },
+                { "id": 1, "sheetId": "symbols2", "frameId": "rsym6-bell.png", "desc": "Bell", "sound": "SymbolBell",
+                    "shortAnimation": { "autoplay": false, "loop": false, "speed": 0.3, "animationIds": [
+                        { "sheetId": "symbols2", "animationId": "rsym6/rsym6_anim" },
+                        { "sheetId": "symbols3", "animationId": "rsym6/rsym6_anim" }
+                    ] },
+                    "animation": { "autoplay": false, "loop": false, "speed": 0.3, "animationIds": [
+                        { "sheetId": "symbols2", "animationId": "rsym6/rsym6_anim" },
+                        { "sheetId": "symbols3", "animationId": "rsym6/rsym6_anim" }
+                    ] }
+                },
+                { "id": 2, "sheetId": "symbols2", "frameId": "rsym5-watermelon.png", "desc": "Melon", "sound": "SymbolMelon",
+                    "shortAnimation": { "sheetId": "symbols2", "animationId": "rsym5/rsym5_anim", "autoplay": false, "loop": false, "speed": 0.3 },
+                    "animation": { "sheetId": "symbols2", "animationId": "rsym5/rsym5_anim", "autoplay": false, "loop": false, "speed": 0.3 }
+                },
+                { "id": 3, "sheetId": "symbols1", "frameId": "rsym4-plum.png", "desc": "Plum", "sound": "SymbolPlum",
+                    "shortAnimation": { "autoplay": false, "loop": false, "speed": 0.3, "animationIds": [
+                        { "sheetId": "symbols1", "animationId": "rsym4/rsym4_anim" },
+                        { "sheetId": "symbols2", "animationId": "rsym4/rsym4_anim" }
+                    ] },
+                    "animation": { "autoplay": false, "loop": false, "speed": 0.3, "animationIds": [
+                        { "sheetId": "symbols1", "animationId": "rsym4/rsym4_anim" },
+                        { "sheetId": "symbols2", "animationId": "rsym4/rsym4_anim" }
+                    ] }
+                },
+                { "id": 4, "sheetId": "symbols0", "frameId": "rsym2-orange.png", "desc": "Orange", "sound": "SymbolOrange",
+                    "shortAnimation": { "sheetId": "symbols1", "animationId": "rsym2/rsym2_anim", "autoplay": false, "loop": false, "speed": 0.3 },
+                    "animation": { "sheetId": "symbols1", "animationId": "rsym2/rsym2_anim", "autoplay": false, "loop": false, "speed": 0.3 }
+                },
+                { "id": 5, "sheetId": "symbols1", "frameId": "rsym3-lemon.png", "desc": "Lemon/Lime", "sound": "SymbolLemon",
+                    "shortAnimation": { "sheetId": "symbols1", "animationId": "rsym3/rsym3_anim", "autoplay": false, "loop": false, "speed": 0.3},
+                    "animation": { "sheetId": "symbols1", "animationId": "rsym3/rsym3_anim", "autoplay": false, "loop": false, "speed": 0.3}
+                },
+                { "id": 6, "sheetId": "symbols0", "frameId": "rsym1-cherry.png", "desc": "Cherry", "sound": "SymbolCherry",
+                    "shortAnimation": { "sheetId": "symbols0", "animationId": "rsym1/rsym1_anim", "autoplay": false, "loop": false, "speed": 0.3 },
+                    "animation": { "sheetId": "symbols0", "animationId": "rsym1/rsym1_anim", "autoplay": false, "loop": false, "speed": 0.3 }
+                },
+                { "id": 7, "sheetId": "symbols0", "frameId": "rsym0-scatter.png", "scatter": true, "desc": "Star (Scatter)", "sound": "SymbolScatter",
+                    "shortAnimation": { "sheetId": "symbols0", "animationId": "rsym0/rsym0_anim", "autoplay": false, "loop": false, "speed": 0.3 },
+                    "animation": { "sheetId": "symbols0", "animationId": "rsym0/rsym0_anim", "autoplay": false, "loop": false, "speed": 0.3 }
+                }
+            ],
+            "winLines": {
+                "containerId": "winLines",
+                "autoHideTime": 2000,
+                "lines": [
+                    { "number": 1, "assetId": "winLine1", "positions": [1, 1, 1, 1, 1], "color": "#ED3400" },
+                    { "number": 2, "assetId": "winLine2", "positions": [2, 2, 2, 2, 2], "color": "#1BAE02" },
+                    { "number": 3, "assetId": "winLine3", "positions": [0, 0, 0, 0, 0], "color": "#FF8700" },
+                    { "number": 4, "assetId": "winLine4", "positions": [3, 3, 3, 3, 3], "color": "#F2E102" },
+                    { "number": 5, "assetId": "winLine5", "positions": [1, 2, 3, 2, 1], "color": "#EE4099" },
+                    { "number": 6, "assetId": "winLine6", "positions": [2, 1, 0, 1, 2], "color": "#009FFF" },
+                    { "number": 7, "assetId": "winLine7", "positions": [0, 0, 1, 2, 3], "color": "#9BEF45" },
+                    { "number": 8, "assetId": "winLine8", "positions": [3, 3, 2, 1, 0], "color": "#0BCDCC" },
+                    { "number": 9, "assetId": "winLine9", "positions": [1, 0, 0, 0, 1], "color": "#902BE1" },
+                    { "number": 10, "assetId": "winLine10", "positions": [2, 3, 3, 3, 2], "color": "#F2E102" },
+                    { "number": 11, "assetId": "winLine1", "positions": [0, 1, 2, 3, 3], "color": "#ED3400" },
+                    { "number": 12, "assetId": "winLine2", "positions": [3, 2, 1, 0, 0], "color": "#1BAE02" },
+                    { "number": 13, "assetId": "winLine3", "positions": [2, 3, 2, 1, 2], "color": "#FF8700" },
+                    { "number": 14, "assetId": "winLine4", "positions": [1, 0, 1, 2, 1], "color": "#F2E102" },
+                    { "number": 15, "assetId": "winLine5", "positions": [0, 1, 0, 1, 0], "color": "#EE4099" },
+                    { "number": 16, "assetId": "winLine6", "positions": [3, 2, 3, 2, 3], "color": "#009FFF" },
+                    { "number": 17, "assetId": "winLine7", "positions": [1, 2, 1, 0, 1], "color": "#9BEF45" },
+                    { "number": 18, "assetId": "winLine8", "positions": [2, 1, 2, 3, 2], "color": "#0BCDCC" },
+                    { "number": 19, "assetId": "winLine9", "positions": [0, 1, 1, 1, 0], "color": "#902BE1" },
+                    { "number": 20, "assetId": "winLine10", "positions": [3, 2, 2, 2, 3], "color": "#F2E102" },
+                    { "number": 21, "assetId": "winLine1", "positions": [2, 2, 1, 0, 0], "color": "#ED3400" },
+                    { "number": 22, "assetId": "winLine2", "positions": [1, 1, 2, 3, 3], "color": "#1BAE02" },
+                    { "number": 23, "assetId": "winLine3", "positions": [0, 1, 2, 2, 3], "color": "#FF8700" },
+                    { "number": 24, "assetId": "winLine4", "positions": [3, 2, 1, 1, 0], "color": "#F2E102" },
+                    { "number": 25, "assetId": "winLine5", "positions": [2, 1, 1, 1, 0], "color": "#EE4099" },
+                    { "number": 26, "assetId": "winLine6", "positions": [1, 2, 2, 2, 3], "color": "#009FFF" },
+                    { "number": 27, "assetId": "winLine7", "positions": [0, 0, 1, 0, 0], "color": "#9BEF45" },
+                    { "number": 28, "assetId": "winLine8", "positions": [3, 3, 2, 3, 3], "color": "#0BCDCC" },
+                    { "number": 29, "assetId": "winLine9", "positions": [2, 2, 3, 2, 2], "color": "#902BE1" },
+                    { "number": 30, "assetId": "winLine10", "positions": [1, 1, 0, 1, 1], "color": "#F2E102" },
+                    { "number": 31, "assetId": "winLine1", "positions": [0, 0, 0, 1, 2], "color": "#ED3400" },
+                    { "number": 32, "assetId": "winLine2", "positions": [3, 3, 3, 2, 1], "color": "#1BAE02" },
+                    { "number": 33, "assetId": "winLine3", "positions": [2, 3, 3, 2, 1], "color": "#FF8700" },
+                    { "number": 34, "assetId": "winLine4", "positions": [1, 0, 0, 1, 2], "color": "#F2E102" },
+                    { "number": 35, "assetId": "winLine5", "positions": [0, 1, 1, 2, 3], "color": "#EE4099" },
+                    { "number": 36, "assetId": "winLine6", "positions": [3, 2, 2, 1, 0], "color": "#009FFF" },
+                    { "number": 37, "assetId": "winLine7", "positions": [1, 0, 1, 2, 3], "color": "#9BEF45" },
+                    { "number": 38, "assetId": "winLine8", "positions": [2, 3, 2, 1, 0], "color": "#0BCDCC" },
+                    { "number": 39, "assetId": "winLine9", "positions": [0, 1, 2, 3, 2], "color": "#902BE1" },
+                    { "number": 40, "assetId": "winLine10", "positions": [3, 2, 1, 0, 1], "color": "#F2E102" }
+                ]
+            },
+            "winFrames": {
+                "width": 262,
+                "height": 203,
+                "animations": [
+                    { "id": "frame1", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame2", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame3", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame4", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame5", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame6", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame7", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame8", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame9", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame10", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame11", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame12", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame13", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame14", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame15", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame16", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame17", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame18", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame19", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame20", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame21", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame22", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame23", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame24", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame25", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame26", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame27", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame28", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame29", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame30", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame31", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame32", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame33", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame34", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame35", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame36", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame37", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame38", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame39", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]},
+                    { "id": "frame40", "autoplay": true, "loop": true, "speed": 0.3, "animationIds": [
+                        { "sheetId": "winframes0", "animationId": "frame_animate" }
+                    ]}
+                ],
+                "winPlate": {
+                    "width": 240,
+                    "height": 40,
+                    "offsetTop": 5,
+                    "offsetLeft": -15,
+                    "fontStyle": {
+                        "fontSize": 25,
+                        "fontFamily": "Arial",
+                        "fontWeight": "bold",
+                        "align": "center"
+                    }
+                }
+            }
+        },
+        {
+            "id": "betPanel",
+            "dom": false,
+            "containerId": "betPanelContainer",
+            "autoCollectTime": 5000,
+            "buttons": [
+                { "id": "enterGamble", "layoutId": "enterGambleButton", "domId": "enterGambleButton" }
+            ]
+        },
+        {
+            "id": "betPanel1",
+            "dom": false,
+            "containerId": "betPanelContainer1",
+            "autoCollectTime": 5000,
+            "buttons": [
+                { "id": "spin", "layoutId": "spinButton", "domId": "spinButton" },
+                { "id": "collect", "layoutId": "collectButton", "domId": "collectButton" },
+                { "id": "speedUp", "layoutId": "speedUpButton", "domId": "speedUpButton" },
+                { "id": "autoplay", "layoutId": "autoplayButton", "domId": "autoplayButton" }
+            ],
+            "animations": [
+                { "id": "autoplayAnimation", "layoutId": "autoplayAnimation", "domId": "autoplayAnimation" }
+            ]
+        },
+        {
+            "id": "console",
+            "dom": false,
+            "buttons": [
+                { "id": "menu", "layoutId": "menuButton", "domId": "menuButton" },
+                { "id": "exitGame", "layoutId": "exitButton", "domId": "exitGameButton" },
+                { "id": "bet", "layoutId": "betButton" },
+                { "id": "betDecrease", "layoutId": "betDecreaseButton" },
+                { "id": "betIncrease", "layoutId": "betIncreaseButton" },
+                { "id": "lines", "layoutId": "linesButton" },
+                { "id": "linesIncrease", "layoutId": "linesIncreaseButton" },
+                { "id": "linesDecrease", "layoutId": "linesDecreaseButton" },
+                { "id": "help", "layoutId": "helpButton" }
+            ]
+        },
+        {
+            "id": "floatingButtonHome",
+            "dom": false,
+            "buttons": [
+                { "id": "exitGame", "layoutId": "exitButton", "domId": "exitGameButton" },
+                { "id": "soundOn", "layoutId": "soundOnButton", "domId": "soundOnButton" },
+                { "id": "soundOff", "layoutId": "soundOffButton", "domId": "soundOffButton" }
+            ]
+        },
+        {
+            "id": "floatingButtonGamble",
+            "dom": false,
+            "buttons": [
+                { "id": "gambleOn", "layoutId": "gambleOnButton", "domId": "gambleOnButton" },
+                { "id": "gambleOff", "layoutId": "gambleOffButton", "domId": "gambleOffButton" }
+            ]
+        },
+        {
+            "id": "floatingButtonHelp",
+            "dom": false,
+            "buttons": [
+                { "id": "help", "layoutId": "helpButton" }
+            ]
+        },
+        {
+            "id": "autoplayStarter",
+            "containerId": "autoplayColor",
+            "dom": false
+        },
+        {
+            "id": "gameSettings",
+            "dom": false,
+            "switches": [
+                { "id": "sound", "icons": { "on": "sound-on-icon", "off": "sound-off-icon", "defaultState": "on" }},
+                { "id": "gamble", "icons": { "on": "gamble-on-icon", "off": "gamble-off-icon", "defaultState": "off" }}
+            ],
+            "buttons": ["back"],
+            "versionInfoId": "versionInfo",
+            "volumeSliderId": "volumeSlider",
+            "gambleIndicatorId": "gambleIcon"
+        },
+        {
+            "id": "winCounter",
+            "dom": false,
+            "textId": "counter",
+            "coinsShowerId": "coinsShower",
+            "winCoinsId": "winCoins",
+            "continuesWinCounting": false
+        },
+        {
+            "id": "statusLine",
+            "dom": false,
+            "textId": "statusText"
+        },
+        {
+            "id": "soundManager",
+            "dom": false,
+            "sheetId": "soundMarkers"
+        },
+        {
+            "id": "freeGames",
+            "dom": false,
+            "plaque": {
+                "layoutId": "plaque",
+                "backgrounds": {
+                    "ENTER_BONUS_GAMES": "background",
+                    "ADDITIONAL_BONUS_GAMES": "background",
+                    "TOTAL_WIN": "background1"
+                },
+                "bonusGames": [],
+                "totalWinId": "totalWin_value",
+                "autoHideTime": 3500
+            },
+            "featureGames": {
+                "layoutId": "featureGame",
+                "labelId": "featureGameLabel",
+                "valueId": "featureGameValue"
+            },
+            "featureWin": {
+                "layoutId": "featureWin",
+                "labelId": "featureWinLabel",
+                "valueId": "featureWinValue"
+            }
+        },
+        {
+            "id": "help",
+            "dom": false,
+            "containerId": "helpContainer",
+            "pageInfoId": "currentPageInfo",
+            "buttons": [
+                { "id": "next", "domId": "next" },
+                { "id": "previous", "domId": "previous" },
+                { "id": "exit", "domId": "exit" }
+            ],
+            "pages": [
+                { "id": "page1", "domId": "page1", "default": true },
+                { "id": "page2", "domId": "page2" },
+                { "id": "page3", "domId": "page3" },
+                { "id": "page4", "domId": "page4" },
+                { "id": "page5", "domId": "page5" }
+            ]
+        },
+        {
+            "id": "gamble",
+            "dom": false,
+            "types": [
+                {
+                    "id": "redOrBlack",
+                    "containerId": "redOrBlack",
+                    "type": "RED_OR_BLACK",
+                    "info": {
+                        "colorPaysId": "colorPaysValue",
+                        "suitPaysId": "suitPaysValue",
+                        "gamblePaysId": "gambleAmountValue"
+                    },
+                    "history": {
+                        "containerId": "history",
+                        "signsContainerId": "signsContainer",
+                        "signs": { "autoplay": false, "speed": 0.5, "loop": false, "animationIds": [
+                            { "sheetId": "gamble0", "animationId": "history" },
+                            { "sheetId": "gamble1", "animationId": "history" }
+                        ]}
+                    },
+                    "cards": {
+                        "containerId": "cards",
+                        "cardBackId": "cardBack",
+                        "cardsId": "cards"
+                    },
+                    "buttons": ["btnDiamond", "btnHeart", "btnRed", "btnSpade", "btnClub", "btnBlack"],
+                    "presentationCompleteTime": 2500
+                }
+            ]
+        }
+    ]
+}

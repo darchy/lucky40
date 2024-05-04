@@ -1,0 +1,79 @@
+{"frames": {
+
+"CatCoins_spojeno_LOOP_0021.png":
+{
+	"frame": {"x":1478,"y":751,"w":367,"h":644},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":374,"y":124,"w":367,"h":644},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0023.png":
+{
+	"frame": {"x":1109,"y":751,"w":367,"h":686},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":368,"y":82,"w":367,"h":686},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0041.png":
+{
+	"frame": {"x":1,"y":1,"w":667,"h":727},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":238,"y":18,"w":667,"h":727},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0061.png":
+{
+	"frame": {"x":1292,"y":1,"w":474,"h":748},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":342,"y":20,"w":474,"h":748},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0069.png":
+{
+	"frame": {"x":670,"y":1,"w":620,"h":748},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":259,"y":20,"w":620,"h":748},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0071.png":
+{
+	"frame": {"x":1,"y":730,"w":650,"h":738},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":244,"y":30,"w":650,"h":738},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+},
+"CatCoins_spojeno_LOOP_0091.png":
+{
+	"frame": {"x":653,"y":751,"w":454,"h":752},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":340,"y":16,"w":454,"h":752},
+	"sourceSize": {"w":1024,"h":768},
+	"anchor": {"x":0,"y":0}
+}},
+"animations": {
+	"CatCoins_spojeno_LOOP": ["CatCoins_spojeno_LOOP_0021.png","CatCoins_spojeno_LOOP_0023.png","CatCoins_spojeno_LOOP_0041.png","CatCoins_spojeno_LOOP_0061.png","CatCoins_spojeno_LOOP_0069.png","CatCoins_spojeno_LOOP_0071.png","CatCoins_spojeno_LOOP_0091.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bigWin-5.png",
+	"format": "RGBA8888",
+	"size": {"w":1846,"h":1504},
+	"scale": "1",
+	"related_multi_packs": [ "bigWin-0.json", "bigWin-1.json", "bigWin-2.json", "bigWin-3.json", "bigWin-4.json", "bigWin-6.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:51676c6330e927ae9508e17bb2197df8:6fdcb644ba145c840e0654643fd547b2:707e69a339137999535a9523c2f81fe0$"
+}
+}
