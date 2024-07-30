@@ -1712,8 +1712,8 @@ export class GameController implements IGameController {
             return;
         }
 
-        const gameStage: GPGameStage =
-            this._outcomePayload.bonusGamesDetails !== undefined ? GPGameStage.FREE_GAME : GPGameStage.BASE_GAME;
+        const isInBonusGames: boolean = this._outcomePayload.bonusGamesDetails !== undefined && this._outcomePayload.bonusGamesDetails.exitBonusGames !== true;
+        const gameStage: GPGameStage = isInBonusGames ? GPGameStage.FREE_GAME : GPGameStage.BASE_GAME;
         const request: GPRequestPayload = new GPRequestPayload(gameStage, GPRequestType.PLAY, { autoplay: false });
         this._gp.sendRequest(request);
 
