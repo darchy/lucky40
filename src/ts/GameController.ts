@@ -361,6 +361,15 @@ export class GameController implements IGameController {
             case CONTINUE_ACTIONS.ENTER_BROKEN_GAME:
                 this._reels.animateWin();
                 //this._soundManager.playSound("Storyboard");
+
+                const winVal: number = Number(this._outcomePayload.win);
+                
+                if (!this._winCounter.isInCounting() && winVal > 0) {
+                    this.setBetPanelWinCountingState();
+        
+                    this._winCounter.countTo(this._outcomePayload.win, this._outcomePayload.stakePayload.totalBet, this._isAutoplayEnabled);
+                    this._soundManager.playSound('Credit3Long');
+                }
                 break;
 
             case CONTINUE_ACTIONS.CONTINUE_GAMBLE_GAME:
