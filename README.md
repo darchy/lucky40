@@ -40,7 +40,7 @@ A classic, high-performance video slot featuring a 5x4 grid and a fixed 40-line 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/darchy/booksofmoses.git
+   git clone https://github.com/darchy/lucky40.git
 2. **Install all dependencies:**
    ```bash
    yarn install
