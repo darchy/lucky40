@@ -23,9 +23,16 @@ A classic, high-performance video slot featuring a 5x4 grid and a fixed 40-line 
 
 ## 🎬 Gameplay Showcase
 > [!NOTE]
-> Highlighting the 40-line win evaluation and the seamless gamble transition.
+> Technical demonstration of reel transitions and expansion logic.
 
-![Lucky40 Preview](IME_TVOG_FAJLA.gif)
+<p align="center">
+   <img src="lucky_40_1.png" alt="Lucky40 Preview" width="45%">
+   <img src="lucky_40_2.png" alt="Lucky40 Preview" width="45%">
+</p>
+
+<p align="center">
+   <img src="lucky_40_gameplay.gif" alt="Lucky 40 Gameplay" width="90%">
+</p>
 
 ---
 
@@ -33,4 +40,13 @@ A classic, high-performance video slot featuring a 5x4 grid and a fixed 40-line 
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/SpinovaGames/lucky40.git](https://github.com/SpinovaGames/lucky40.git)
+   git clone https://github.com/darchy/booksofmoses.git
+2. **Install all dependencies:**
+   ```bash
+   yarn install
+3. **Link the previously cloned framework:**
+   ```bash
+   yarn link nzl_fwk
+4. **Launch the game:**
+   ```bash
+   yarn launch
